@@ -1,2 +1,2 @@
 # temalacatl-codice
-Códice digital de Temalácatl TCG
+Códice digital de Temalacatl TCG
