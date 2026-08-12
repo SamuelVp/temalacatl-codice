@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temalácatl Códice</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#07140f;color:#222}
+.contenedor{max-width:700px;margin:auto;background:#eee5d2;min-height:100vh}
+.encabezado{background:#06291d;color:#fff;text-align:center;padding:28px 20px 30px;border-bottom:4px solid #c99b37}
+.codigo{color:#d8ad4d;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.encabezado h1{margin:10px 0 4px;font-family:Georgia,serif;font-size:38px;color:#f4e5bd}
+.subtitulo{margin:0;font-size:19px;font-style:italic;color:#d8ad4d}
+.hero{width:100%;background:#020806}
+.video-principal{display:block;width:100%;height:auto;background:#000}
+.video-proximamente{min-height:260px;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#061c13;color:#f4e5bd;text-align:center;padding:30px}
+.video-proximamente span{font-size:45px;margin-bottom:12px}
+.controles-sonido{background:#09281c;text-align:center;padding:11px;border-bottom:1px solid #315242}
+.boton-sonido{border:1px solid #d6aa4b;background:#123c2b;color:#f4e5bd;padding:10px 22px;border-radius:25px;font-size:15px;cursor:pointer}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:#061c13;border-bottom:4px solid #c99b37}
+.tab-button{border:0;padding:17px 10px;font-size:16px;font-weight:bold;cursor:pointer;background:#0b2e20;color:#c9b98c}
+.tab-button:first-child{border-right:1px solid #315242}
+.tab-button.active{background:#eee5d2;color:#123c2b;box-shadow:inset 0 -4px 0 #b88b32}
+.contenido{padding:18px}
+.tab-content{display:none}.tab-content.active{display:block}
+.tarjeta{background:#fffaf0;border-radius:14px;padding:20px;margin-bottom:15px;border-left:5px solid #b88b32;box-shadow:0 3px 10px rgba(0,0,0,.10)}
+.tarjeta h2{margin-top:0;color:#123c2b;font-size:21px}.tarjeta h3{color:#123c2b}.tarjeta p{line-height:1.65}
+.datos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.dato{background:#f2e7ce;padding:14px;border-radius:10px;text-align:center}
+.dato strong{display:block;color:#123c2b;margin-bottom:5px}
+.temalacatl{background:#0b2e20;color:white;border-left:5px solid #d6aa4b}
+.temalacatl h2,.temalacatl h3{color:#f3d993}.temalacatl .dato{background:#f4ead4;color:#222}
+.bloque-juego{margin-top:18px;background:rgba(255,255,255,.08);border:1px solid rgba(214,170,75,.5);padding:17px;border-radius:12px}
+.bloque-juego h3{margin-top:0}
+.fuentes ul{padding-left:20px}.fuentes li{margin-bottom:14px;line-height:1.5}.fuentes a{color:#0b5c42;font-weight:bold;text-decoration:none}
+.mapa-card{overflow:hidden;padding:0}
+.mapa-cabecera{padding:20px 20px 8px}.mapa-cabecera h2{margin:0 0 8px}.mapa-cabecera p{margin:0 0 12px}
+
+/* MAPA BASE ILUSTRADO */
+.mapa-imagen-wrap{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  background:#ead9ad;
+  border-top:1px solid #ccb77f;
+  border-bottom:1px solid #ccb77f;
+}
+
+.mapa-base{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* BANDERAS ROJAS SUPERPUESTAS */
+.mapa-marcador{
+  position:absolute;
+  transform:translate(-50%,-90%);
+  z-index:4;
+  cursor:pointer;
+  user-select:none;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.45));
+}
+
+.mapa-marcador .bandera{
+  display:block;
+  font-size:clamp(20px,4vw,34px);
+  line-height:1;
+  animation:latidoBandera 2.2s ease-in-out infinite;
+}
+
+.mapa-marcador.zona::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:76%;
+  width:clamp(26px,6vw,52px);
+  height:clamp(26px,6vw,52px);
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:rgba(175,34,24,.15);
+  border:2px dashed rgba(145,33,24,.70);
+  z-index:-1;
+}
+
+.mapa-etiqueta{
+  position:absolute;
+  left:50%;
+  top:100%;
+  transform:translateX(-50%);
+  margin-top:4px;
+  padding:4px 7px;
+  border-radius:7px;
+  background:rgba(64,43,21,.88);
+  color:#fff6dc;
+  font-size:11px;
+  font-weight:bold;
+  white-space:nowrap;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .15s;
+}
+
+.mapa-marcador:hover .mapa-etiqueta,
+.mapa-marcador:focus .mapa-etiqueta{
+  opacity:1;
+}
+
+@keyframes latidoBandera{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-2px)}
+}
+
+.mapa-leyenda{padding:14px 20px 18px}
+.mapa-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.mapa-chip{display:inline-flex;align-items:center;gap:7px;border:1px solid #cfb56d;background:#f6ecd3;border-radius:999px;padding:7px 10px;font-size:13px}
+.mapa-chip:before{content:"🚩";font-size:13px}
+.mapa-nota{margin:0;color:#6d624b;font-size:12px;line-height:1.45;font-style:italic}
+
+/* Diagrama especial para ámbitos no geográficos */
+.mapa-svg-wrap{background:linear-gradient(180deg,#efe1bd,#d9c594);border-top:1px solid #ccb77f;border-bottom:1px solid #ccb77f;overflow:hidden}
+.mapa-svg{display:block;width:100%;height:auto}
+
+.error{padding:50px 20px;text-align:center;color:white}
+footer{background:#061c13;color:#d8ad4d;text-align:center;padding:25px 15px;border-top:3px solid #c99b37}
+footer strong{font-family:Georgia,serif;font-size:22px}footer p{margin-bottom:0}
+@media(max-width:500px){.encabezado h1{font-size:31px}.contenido{padding:12px}.tarjeta{padding:17px}.mapa-card{padding:0}.tab-button{font-size:14px;padding:15px 5px}.mapa-cabecera{padding:17px 17px 8px}.mapa-leyenda{padding:12px 17px 16px}}
+</style>
+</head>
+<body>
+<main class="contenedor" id="pagina">
+<header class="encabezado">
+<div class="codigo" id="codigo"></div>
+<h1 id="nombre">Cargando...</h1>
+<p class="subtitulo" id="subtitulo"></p>
+</header>
+
+<section class="hero">
+<div id="media-container"></div>
+<div class="controles-sonido" id="controles-sonido" style="display:none">
+<button class="boton-sonido" id="boton-sonido">🔊 Activar sonido</button>
+</div>
+</section>
+
+<nav class="tabs">
+<button class="tab-button active" id="btn-cultural" onclick="abrirPestana('cultural')">🏺 Datos culturales</button>
+<button class="tab-button" id="btn-temalacatl" onclick="abrirPestana('temalacatl')">⚔️ Temalácatl</button>
+</nav>
+
+<section class="contenido tab-content active" id="tab-cultural">
+<div id="secciones-culturales"></div>
+<div id="mapa-contenedor"></div>
+<article class="tarjeta">
+<h2>📌 Datos culturales generales</h2>
+<div class="datos" id="datos-generales"></div>
+</article>
+<article class="tarjeta fuentes">
+<h2>📚 Fuentes y referencias</h2>
+<div id="contenedor-fuentes"></div>
+</article>
+</section>
+
+<section class="contenido tab-content" id="tab-temalacatl">
+<article class="tarjeta temalacatl">
+<h2>⚔️ Información de la carta</h2>
+<div class="datos" id="datos-temalacatl"></div>
+<div id="descripcion-juego"></div>
+<div id="efecto-juego"></div>
+<div id="interpretacion-juego"></div>
+</article>
+</section>
+
+<footer><strong>Temalácatl Códice</strong><p>Conoce México a través de sus cartas</p></footer>
+</main>
+
+<script>
+function abrirPestana(p){
+  const c=document.getElementById("tab-cultural"),t=document.getElementById("tab-temalacatl"),
+  bc=document.getElementById("btn-cultural"),bt=document.getElementById("btn-temalacatl");
+  [c,t,bc,bt].forEach(x=>x.classList.remove("active"));
+  if(p==="temalacatl"){t.classList.add("active");bt.classList.add("active")}
+  else{c.classList.add("active");bc.classList.add("active")}
+}
+
+/*
+  Proyección aproximada de latitud/longitud sobre la imagen base.
+  Si algún día cambias el encuadre del mapa, solo ajustamos
+  left/right/top/bottom.
+*/
+function proyectarSobreImagen(lat,lon){
+  const minLon=-118.5,maxLon=-86.5,minLat=14,maxLat=33;
+
+  const left=4.5;
+  const right=96.0;
+  const top=10.0;
+  const bottom=89.0;
+
+  const nx=(lon-minLon)/(maxLon-minLon);
+  const ny=(maxLat-lat)/(maxLat-minLat);
+
+  return {
+    x:left+(nx*(right-left)),
+    y:top+(ny*(bottom-top))
+  };
+}
+
+function escaparHTML(texto){
+  return String(texto??"")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+function mapaMexico(m){
+  let marcas="";
+
+  (m.puntos||[]).forEach(pt=>{
+    const q=proyectarSobreImagen(pt.lat,pt.lon);
+    const clase=pt.estilo==="zona" ? "mapa-marcador zona" : "mapa-marcador";
+    const nombre=escaparHTML(pt.nombre);
+
+    marcas+=`
+      <div
+        class="${clase}"
+        style="left:${q.x.toFixed(2)}%;top:${q.y.toFixed(2)}%;"
+        tabindex="0"
+        role="img"
+        aria-label="${nombre}">
+          <span class="bandera">🚩</span>
+          <span class="mapa-etiqueta">${nombre}</span>
+      </div>
+    `;
+  });
+
+  return `
+    <div class="mapa-imagen-wrap">
+
+      <img
+        class="mapa-base"
+        src="mapa_mexico_base.png"
+        alt="Mapa cultural ilustrado de México"
+        loading="lazy">
+
+      ${marcas}
+
+    </div>
+  `;
+}
+
+function mapaCosmo(m){
+  const a=m.ambito||"";
+  const ys={cielo_superior:110,cielo:215,paraiso_lluvia:215,lugar_primordial:320,inframundo:425};
+  const y=ys[a]||320;
+  const hi=x=>a===x||((x==="cielo")&&(a==="paraiso_lluvia"));
+  return `<div class="mapa-svg-wrap"><svg class="mapa-svg" viewBox="0 0 900 520" role="img" aria-label="${m.titulo}">
+  <rect width="900" height="520" fill="#ead9ad"/>
+  <text x="450" y="35" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#5c4922" letter-spacing="2">COSMOVISIÓN · REPRESENTACIÓN SIMBÓLICA</text>
+  <rect x="80" y="65" width="740" height="90" rx="18" fill="${hi("cielo_superior")?"#d5ae4c":"#e7d7aa"}" stroke="#7b622c" stroke-width="${hi("cielo_superior")?4:2}"/>
+  <text x="450" y="105" text-anchor="middle" font-family="Georgia,serif" font-size="23" fill="#173c2c">Cielo superior / dualidad</text>
+  <rect x="80" y="170" width="740" height="90" rx="18" fill="${hi("cielo")?"#d5ae4c":"#e7d7aa"}" stroke="#7b622c" stroke-width="${hi("cielo")?4:2}"/>
+  <text x="450" y="210" text-anchor="middle" font-family="Georgia,serif" font-size="23" fill="#173c2c">Cielo / lluvia / estrellas</text>
+  <rect x="80" y="275" width="740" height="90" rx="18" fill="${hi("lugar_primordial")?"#d5ae4c":"#e7d7aa"}" stroke="#7b622c" stroke-width="${hi("lugar_primordial")?4:2}"/>
+  <text x="450" y="315" text-anchor="middle" font-family="Georgia,serif" font-size="23" fill="#173c2c">Mundo terrestre / lugar primordial</text>
+  <rect x="80" y="380" width="740" height="90" rx="18" fill="${hi("inframundo")?"#7f3d2c":"#d8c69a"}" stroke="#6a4b2e" stroke-width="${hi("inframundo")?4:2}"/>
+  <text x="450" y="420" text-anchor="middle" font-family="Georgia,serif" font-size="23" fill="${hi("inframundo")?"#fff0c8":"#173c2c"}">Inframundo / mundo de los muertos</text>
+  <circle cx="450" cy="${y}" r="11" fill="#8f2f1e" stroke="#fff1bf" stroke-width="3"/>
+  </svg></div>`;
+}
+
+function mostrarMapa(m){
+  const c=document.getElementById("mapa-contenedor");c.innerHTML="";
+  if(!m)return;
+  const art=document.createElement("article");art.className="tarjeta mapa-card";
+  const g=m.tipo==="cosmologico"?mapaCosmo(m):mapaMexico(m);
+  const chips=(m.puntos&&m.puntos.length)?`<div class="mapa-chips">${m.puntos.map(pt=>`<span class="mapa-chip">${pt.nombre}</span>`).join("")}</div>`:"";
+  art.innerHTML=`<div class="mapa-cabecera"><h2>🗺️ ${m.titulo}</h2><p>${m.descripcion||""}</p></div>${g}<div class="mapa-leyenda">${chips}<p class="mapa-nota">${m.nota||""}</p></div>`;
+  c.appendChild(art);
+}
+
+async function cargarCarta(){
+try{
+  const id=new URLSearchParams(window.location.search).get("id");
+  if(!id){document.getElementById("pagina").innerHTML=`<div class="error"><h1>Temalácatl Códice</h1><p>Escanea el código QR de una carta para consultar su información.</p></div>`;return}
+
+  const [rCards,rMaps]=await Promise.all([
+    fetch("cards.json?v="+Date.now()),
+    fetch("maps.json?v="+Date.now()).catch(()=>null)
+  ]);
+  if(!rCards.ok)throw new Error("No se pudo cargar cards.json");
+  const bd=await rCards.json();
+  let mapas={};
+  if(rMaps&&rMaps.ok)mapas=await rMaps.json();
+
+  const carta=bd[id];
+  if(!carta){document.getElementById("pagina").innerHTML=`<div class="error"><h1>Carta no encontrada</h1><p>No existe una carta registrada con el código <strong>${id}</strong>.</p></div>`;return}
+
+  document.title=carta.nombre+" | Temalácatl Códice";
+  document.getElementById("codigo").textContent=`TEMALÁCATL CÓDICE · ${carta.codigo}`;
+  document.getElementById("nombre").textContent=carta.nombre;
+  const sub=document.getElementById("subtitulo");
+  if(carta.subtitulo){sub.textContent=carta.subtitulo;sub.style.display="block"}else{sub.style.display="none"}
+
+  const mc=document.getElementById("media-container"),cs=document.getElementById("controles-sonido"),rv=carta.multimedia?.video;
+  if(rv){
+    mc.innerHTML=`<video id="video-principal" class="video-principal" autoplay muted loop playsinline preload="auto" controls><source src="${rv}" type="video/mp4">Tu navegador no puede reproducir este video.</video>`;
+    cs.style.display="block";
+    const v=document.getElementById("video-principal");v.muted=true;const intento=v.play();if(intento!==undefined)intento.catch(()=>{});
+    const b=document.getElementById("boton-sonido");b.onclick=()=>{if(v.muted){v.muted=false;v.volume=1;v.play();b.textContent="🔊 Sonido activado"}else{v.muted=true;b.textContent="🔇 Activar sonido"}};
+  }else{cs.style.display="none";mc.innerHTML=`<div class="video-proximamente"><span>🎬</span><strong>Video próximamente</strong></div>`}
+
+  const culturales=[],juego=[];
+  (carta.secciones||[]).forEach(s=>{
+    const t=(s.titulo||"").toLowerCase();
+    if(t.includes("temalácatl")||t.includes("ficción")||t.includes("ficticio")||t.includes("representación")||t.includes("interpretación"))juego.push(s);else culturales.push(s)
+  });
+
+  const sc=document.getElementById("secciones-culturales");sc.innerHTML="";
+  culturales.forEach(s=>{const a=document.createElement("article");a.className="tarjeta";a.innerHTML=`<h2>${s.icono||"🏺"} ${s.titulo}</h2><p>${s.contenido}</p>`;sc.appendChild(a)});
+
+  mostrarMapa(mapas[id]);
+
+  const dg=document.getElementById("datos-generales");dg.innerHTML="";
+  (carta.datos_generales||[]).forEach(d=>{const x=document.createElement("div");x.className="dato";x.innerHTML=`<strong>${d.nombre}</strong>${d.valor}`;dg.appendChild(x)});
+
+  const cf=document.getElementById("contenedor-fuentes");cf.innerHTML="";
+  if(carta.fuentes&&carta.fuentes.length){
+    const ul=document.createElement("ul");
+    carta.fuentes.forEach(f=>{const li=document.createElement("li");li.innerHTML=`<strong>${f.institucion||""}</strong>${f.titulo?" — "+f.titulo:""}${f.url?`<br><a href="${f.url}" target="_blank" rel="noopener noreferrer">Consultar fuente</a>`:""}`;ul.appendChild(li)});
+    cf.appendChild(ul);
+  }else cf.innerHTML="<p>Fuentes pendientes de integración.</p>";
+
+  const t=carta.temalacatl||{},atk=t.atk??"—",def=t.def??"—";
+  document.getElementById("datos-temalacatl").innerHTML=`<div class="dato"><strong>Categoría</strong>${t.categoria||"—"}</div><div class="dato"><strong>Terreno</strong>${t.terreno||t.tipo||"—"}</div><div class="dato"><strong>Rareza</strong>${t.rareza||"—"}</div><div class="dato"><strong>ATK</strong>${atk}</div><div class="dato"><strong>DEF</strong>${def}</div>`;
+  document.getElementById("descripcion-juego").innerHTML=t.descripcion?`<div class="bloque-juego"><h3>📜 Descripción</h3><p>${t.descripcion}</p></div>`:"";
+  document.getElementById("efecto-juego").innerHTML=t.efecto?`<div class="bloque-juego"><h3>✨ Efecto / Habilidad</h3><p>${t.efecto}</p></div>`:"";
+  const ij=document.getElementById("interpretacion-juego");ij.innerHTML="";
+  juego.forEach(s=>{const x=document.createElement("div");x.className="bloque-juego";x.innerHTML=`<h3>${s.icono||"🎴"} ${s.titulo}</h3><p>${s.contenido}</p>`;ij.appendChild(x)});
+}catch(e){console.error(e);document.getElementById("pagina").innerHTML=`<div class="error"><h1>Error al cargar el Códice</h1><p>No fue posible cargar la información de esta carta.</p></div>`}
+}
+cargarCarta();
+</script>
+</body>
+</html>
