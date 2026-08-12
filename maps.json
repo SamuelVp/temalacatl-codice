@@ -1,0 +1,1516 @@
+{
+  "ENM-001": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Popocatépetl, centro de México.",
+    "puntos": [
+      {
+        "nombre": "Popocatépetl",
+        "lat": 19.023,
+        "lon": -98.622,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-002": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Pico de Orizaba o Citlaltépetl, entre Veracruz y Puebla.",
+    "puntos": [
+      {
+        "nombre": "Pico de Orizaba",
+        "lat": 19.029,
+        "lon": -97.269,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-003": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Iztaccíhuatl, entre Estado de México y Puebla.",
+    "puntos": [
+      {
+        "nombre": "Iztaccíhuatl",
+        "lat": 19.179,
+        "lon": -98.642,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-004": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Nevado de Toluca o Xinantécatl, Estado de México.",
+    "puntos": [
+      {
+        "nombre": "Nevado de Toluca",
+        "lat": 19.108,
+        "lon": -99.758,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-005": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Cofre de Perote o Nauhcampatépetl, Veracruz.",
+    "puntos": [
+      {
+        "nombre": "Cofre de Perote",
+        "lat": 19.492,
+        "lon": -97.147,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-006": {
+    "tipo": "geografico",
+    "titulo": "Región geográfica",
+    "descripcion": "Desierto Sonorense en el noroeste de México.",
+    "puntos": [
+      {
+        "nombre": "Sonora",
+        "lat": 29.2,
+        "lon": -111.7,
+        "estilo": "zona",
+        "radio": 3
+      },
+      {
+        "nombre": "Baja California",
+        "lat": 30,
+        "lon": -114.3,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-007": {
+    "tipo": "geografico",
+    "titulo": "Región geográfica",
+    "descripcion": "Desierto Chihuahuense en el norte y altiplano septentrional.",
+    "puntos": [
+      {
+        "nombre": "Chihuahua",
+        "lat": 28.5,
+        "lon": -106.2,
+        "estilo": "zona",
+        "radio": 3.2
+      },
+      {
+        "nombre": "Coahuila",
+        "lat": 27.2,
+        "lon": -102.2,
+        "estilo": "zona",
+        "radio": 2.5
+      },
+      {
+        "nombre": "Altiplano norte",
+        "lat": 24.5,
+        "lon": -101.2,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-008": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Grutas de Cacahuamilpa, norte de Guerrero.",
+    "puntos": [
+      {
+        "nombre": "Grutas de Cacahuamilpa",
+        "lat": 18.682,
+        "lon": -99.503,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-009": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Xiuhtecuhtli está ampliamente documentado en tradición nahua; se marca el Altiplano Central como referencia.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-010": {
+    "tipo": "geografico",
+    "titulo": "Centro ritual asociado",
+    "descripcion": "Huitzilopochtli tuvo un santuario principal en el Templo Mayor de México-Tenochtitlan.",
+    "puntos": [
+      {
+        "nombre": "México-Tenochtitlan",
+        "lat": 19.434,
+        "lon": -99.132,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-011": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Tezcatlipoca tuvo amplia presencia mesoamericana; se marca el Altiplano Central por su relevancia mexica.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-012": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Tonatiuh pertenece a la tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-013": {
+    "tipo": "geografico",
+    "titulo": "Centro cultural asociado",
+    "descripcion": "Coatlicue es especialmente conocida por la tradición mexica del centro de México.",
+    "puntos": [
+      {
+        "nombre": "México-Tenochtitlan",
+        "lat": 19.434,
+        "lon": -99.132,
+        "estilo": "zona",
+        "radio": 1.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-014": {
+    "tipo": "geografico",
+    "titulo": "Regiones culturales asociadas",
+    "descripcion": "Xipe Tótec fue venerado en distintas regiones mesoamericanas.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.2
+      },
+      {
+        "nombre": "Golfo central",
+        "lat": 19.5,
+        "lon": -96.8,
+        "estilo": "zona",
+        "radio": 1.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-015": {
+    "tipo": "geografico",
+    "titulo": "Centro cultural asociado",
+    "descripcion": "La gran representación de Tlaltecuhtli se vincula con el recinto sagrado de México-Tenochtitlan.",
+    "puntos": [
+      {
+        "nombre": "Templo Mayor",
+        "lat": 19.434,
+        "lon": -99.132,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-016": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Xiuhcóatl pertenece a la tradición nahua-mexica.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-017": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Itzpapálotl pertenece a la tradición nahua; se marca el Altiplano Central como referencia.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-018": {
+    "tipo": "geografico",
+    "titulo": "Inspiración cultural",
+    "descripcion": "Nahual Puma es una creación de Temalácatl inspirada en el nahualismo mesoamericano.",
+    "puntos": [
+      {
+        "nombre": "Mesoamérica central",
+        "lat": 18.5,
+        "lon": -98.5,
+        "estilo": "zona",
+        "radio": 3.2
+      }
+    ],
+    "nota": "Mapa de la tradición inspiradora; no representa un ser real."
+  },
+  "ENM-019": {
+    "tipo": "geografico",
+    "titulo": "Inspiración cultural",
+    "descripcion": "Nahual Coyote es una creación de Temalácatl inspirada en el nahualismo mesoamericano.",
+    "puntos": [
+      {
+        "nombre": "Mesoamérica central",
+        "lat": 18.5,
+        "lon": -98.5,
+        "estilo": "zona",
+        "radio": 3.2
+      }
+    ],
+    "nota": "Mapa de la tradición inspiradora; no representa un ser real."
+  },
+  "ENM-020": {
+    "tipo": "geografico",
+    "titulo": "Distribución aproximada en México",
+    "descripcion": "El puma ocupa numerosos ecosistemas del país.",
+    "puntos": [
+      {
+        "nombre": "Noroeste",
+        "lat": 29,
+        "lon": -111,
+        "estilo": "zona",
+        "radio": 2.5
+      },
+      {
+        "nombre": "Sierra Madre Occidental",
+        "lat": 25,
+        "lon": -106.5,
+        "estilo": "zona",
+        "radio": 2.5
+      },
+      {
+        "nombre": "Centro",
+        "lat": 20,
+        "lon": -100,
+        "estilo": "zona",
+        "radio": 2.2
+      },
+      {
+        "nombre": "Sureste",
+        "lat": 17.2,
+        "lon": -91.5,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-021": {
+    "tipo": "geografico",
+    "titulo": "Distribución histórica y de conservación",
+    "descripcion": "Regiones del norte asociadas con la distribución histórica del lobo mexicano.",
+    "puntos": [
+      {
+        "nombre": "Sierra Madre Occidental",
+        "lat": 29,
+        "lon": -108,
+        "estilo": "zona",
+        "radio": 2.3
+      },
+      {
+        "nombre": "Chihuahua-Sonora",
+        "lat": 30,
+        "lon": -109.5,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Referencia histórica y de conservación; no equivale a población actual continua."
+  },
+  "ENM-033": {
+    "tipo": "geografico",
+    "titulo": "Costa del Pacífico mexicano",
+    "descripcion": "Referencia de la extensa costa mexicana frente al Pacífico.",
+    "puntos": [
+      {
+        "nombre": "Pacífico norte",
+        "lat": 25,
+        "lon": -111.5,
+        "estilo": "zona",
+        "radio": 2.2
+      },
+      {
+        "nombre": "Pacífico centro",
+        "lat": 19,
+        "lon": -105.8,
+        "estilo": "zona",
+        "radio": 2.2
+      },
+      {
+        "nombre": "Pacífico sur",
+        "lat": 15.8,
+        "lon": -96.5,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-034": {
+    "tipo": "geografico",
+    "titulo": "Ubicación histórica",
+    "descripcion": "Antiguo lago de Texcoco en la Cuenca de México.",
+    "puntos": [
+      {
+        "nombre": "Lago de Texcoco",
+        "lat": 19.5,
+        "lon": -98.98,
+        "estilo": "zona",
+        "radio": 1.2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-035": {
+    "tipo": "geografico",
+    "titulo": "Región geográfica",
+    "descripcion": "Mar de Cortés o Golfo de California.",
+    "puntos": [
+      {
+        "nombre": "Mar de Cortés",
+        "lat": 27.4,
+        "lon": -111.8,
+        "estilo": "zona",
+        "radio": 3
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-036": {
+    "tipo": "geografico",
+    "titulo": "Región geográfica",
+    "descripcion": "Los cenotes se concentran especialmente en la península de Yucatán.",
+    "puntos": [
+      {
+        "nombre": "Península de Yucatán",
+        "lat": 20.5,
+        "lon": -89.1,
+        "estilo": "zona",
+        "radio": 2.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-037": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Laguna de Bacalar, Quintana Roo.",
+    "puntos": [
+      {
+        "nombre": "Bacalar",
+        "lat": 18.68,
+        "lon": -88.39,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-038": {
+    "tipo": "geografico",
+    "titulo": "Cuenca del Usumacinta",
+    "descripcion": "Corredor fluvial entre Chiapas, Tabasco y Guatemala.",
+    "puntos": [
+      {
+        "nombre": "Usumacinta alto",
+        "lat": 16.6,
+        "lon": -91,
+        "estilo": "zona",
+        "radio": 1.2
+      },
+      {
+        "nombre": "Usumacinta bajo",
+        "lat": 17.8,
+        "lon": -91.5,
+        "estilo": "zona",
+        "radio": 1.4
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-039": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Canales y chinampas de Xochimilco, Ciudad de México.",
+    "puntos": [
+      {
+        "nombre": "Xochimilco",
+        "lat": 19.26,
+        "lon": -99.1,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-040": {
+    "tipo": "geografico",
+    "titulo": "Costa del Golfo",
+    "descripcion": "Referencia de las costas mexicanas frente al Golfo de México.",
+    "puntos": [
+      {
+        "nombre": "Golfo norte",
+        "lat": 24,
+        "lon": -97,
+        "estilo": "zona",
+        "radio": 2
+      },
+      {
+        "nombre": "Golfo centro",
+        "lat": 20,
+        "lon": -96,
+        "estilo": "zona",
+        "radio": 2
+      },
+      {
+        "nombre": "Golfo sur",
+        "lat": 18.5,
+        "lon": -93,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-041": {
+    "tipo": "geografico",
+    "titulo": "Centros culturales asociados",
+    "descripcion": "Para Tláloc se señalan el Templo Mayor y Monte Tláloc como referentes del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Templo Mayor",
+        "lat": 19.434,
+        "lon": -99.132,
+        "estilo": "point"
+      },
+      {
+        "nombre": "Monte Tláloc",
+        "lat": 19.414,
+        "lon": -98.712,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-042": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Chalchiuhtlicue pertenece a la tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-043": {
+    "tipo": "geografico",
+    "titulo": "Regiones culturales asociadas",
+    "descripcion": "Quetzalcóatl aparece en distintas tradiciones mesoamericanas; se señalan centros especialmente vinculados con su culto e iconografía.",
+    "puntos": [
+      {
+        "nombre": "Cholula",
+        "lat": 19.057,
+        "lon": -98.301,
+        "estilo": "point"
+      },
+      {
+        "nombre": "Teotihuacán",
+        "lat": 19.6925,
+        "lon": -98.8438,
+        "estilo": "point"
+      },
+      {
+        "nombre": "Centro de México",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-044": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Metztli pertenece a tradiciones nahuas del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-045": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Xólotl pertenece a la tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-046": {
+    "tipo": "geografico",
+    "titulo": "Centro ritual asociado",
+    "descripcion": "El gran monolito de Coyolxauhqui fue hallado junto al Templo Mayor.",
+    "puntos": [
+      {
+        "nombre": "Templo Mayor",
+        "lat": 19.434,
+        "lon": -99.132,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-047": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Cipactli pertenece a relatos nahuas de creación; el mapa señala la región cultural de las fuentes.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa cultural; no representa hábitat de una criatura real."
+  },
+  "ENM-048": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Ahuízotl está descrito en fuentes nahuas del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Cuenca de México",
+        "lat": 19.4,
+        "lon": -99.0,
+        "estilo": "zona",
+        "radio": 1.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-049": {
+    "tipo": "geografico",
+    "titulo": "Costas de referencia",
+    "descripcion": "La carta no representa una sola especie; se señalan costas donde distintas tortugas marinas anidan o se desplazan.",
+    "puntos": [
+      {
+        "nombre": "Pacífico",
+        "lat": 17.5,
+        "lon": -101,
+        "estilo": "zona",
+        "radio": 2.2
+      },
+      {
+        "nombre": "Golfo",
+        "lat": 21.5,
+        "lon": -96.5,
+        "estilo": "zona",
+        "radio": 2
+      },
+      {
+        "nombre": "Caribe",
+        "lat": 19.5,
+        "lon": -87.2,
+        "estilo": "zona",
+        "radio": 1.8
+      }
+    ],
+    "nota": "La distribución exacta depende de la especie de tortuga marina."
+  },
+  "ENM-050": {
+    "tipo": "geografico",
+    "titulo": "Distribución de referencia",
+    "descripcion": "Ajolote de Xochimilco (Ambystoma mexicanum).",
+    "puntos": [
+      {
+        "nombre": "Xochimilco",
+        "lat": 19.26,
+        "lon": -99.1,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-051": {
+    "tipo": "geografico",
+    "titulo": "Distribución aproximada",
+    "descripcion": "Cocodrilo de pantano en humedales del Golfo y sureste.",
+    "puntos": [
+      {
+        "nombre": "Tabasco-Campeche",
+        "lat": 18.5,
+        "lon": -91.5,
+        "estilo": "zona",
+        "radio": 2
+      },
+      {
+        "nombre": "Yucatán-Quintana Roo",
+        "lat": 20,
+        "lon": -88.5,
+        "estilo": "zona",
+        "radio": 2
+      },
+      {
+        "nombre": "Golfo sur",
+        "lat": 19,
+        "lon": -95.5,
+        "estilo": "zona",
+        "radio": 1.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-052": {
+    "tipo": "geografico",
+    "titulo": "Distribución aproximada",
+    "descripcion": "Boa en regiones tropicales y subtropicales.",
+    "puntos": [
+      {
+        "nombre": "Pacífico tropical",
+        "lat": 17.5,
+        "lon": -101.5,
+        "estilo": "zona",
+        "radio": 2
+      },
+      {
+        "nombre": "Golfo-sureste",
+        "lat": 18.5,
+        "lon": -93.5,
+        "estilo": "zona",
+        "radio": 2.2
+      },
+      {
+        "nombre": "Yucatán",
+        "lat": 20,
+        "lon": -89,
+        "estilo": "zona",
+        "radio": 1.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-053": {
+    "tipo": "geografico",
+    "titulo": "Distribución de referencia",
+    "descripcion": "El nombre serpiente coral reúne varias especies de Micrurus.",
+    "puntos": [
+      {
+        "nombre": "Golfo",
+        "lat": 20,
+        "lon": -96.5,
+        "estilo": "zona",
+        "radio": 1.8
+      },
+      {
+        "nombre": "Sureste",
+        "lat": 17.5,
+        "lon": -91.5,
+        "estilo": "zona",
+        "radio": 2
+      },
+      {
+        "nombre": "Pacífico sur",
+        "lat": 16.5,
+        "lon": -99,
+        "estilo": "zona",
+        "radio": 1.5
+      }
+    ],
+    "nota": "Mapa general; no representa una única especie."
+  },
+  "ENM-065": {
+    "tipo": "geografico",
+    "titulo": "Región geográfica",
+    "descripcion": "Selva Lacandona, oriente de Chiapas.",
+    "puntos": [
+      {
+        "nombre": "Selva Lacandona",
+        "lat": 16.8,
+        "lon": -91,
+        "estilo": "zona",
+        "radio": 1.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-066": {
+    "tipo": "geografico",
+    "titulo": "Distribución de referencia",
+    "descripcion": "Bosque mesófilo en cadenas montañosas húmedas.",
+    "puntos": [
+      {
+        "nombre": "Sierra Madre Oriental",
+        "lat": 20,
+        "lon": -98.2,
+        "estilo": "zona",
+        "radio": 1.8
+      },
+      {
+        "nombre": "Veracruz-Oaxaca",
+        "lat": 18,
+        "lon": -96.8,
+        "estilo": "zona",
+        "radio": 1.5
+      },
+      {
+        "nombre": "Chiapas",
+        "lat": 16.5,
+        "lon": -92.7,
+        "estilo": "zona",
+        "radio": 1.4
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-067": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Manglares de Sian Ka'an, Quintana Roo.",
+    "puntos": [
+      {
+        "nombre": "Sian Ka'an",
+        "lat": 19.5,
+        "lon": -87.6,
+        "estilo": "zona",
+        "radio": 1.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-068": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Pantanos de Centla, Tabasco.",
+    "puntos": [
+      {
+        "nombre": "Pantanos de Centla",
+        "lat": 18.4,
+        "lon": -92.7,
+        "estilo": "zona",
+        "radio": 1.3
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-069": {
+    "tipo": "geografico",
+    "titulo": "Región de referencia",
+    "descripcion": "Bosques de oyamel del centro de México; se señala la región monarca.",
+    "puntos": [
+      {
+        "nombre": "Michoacán-Estado de México",
+        "lat": 19.55,
+        "lon": -100.25,
+        "estilo": "zona",
+        "radio": 1.6
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-070": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Selva de Los Tuxtlas, Veracruz.",
+    "puntos": [
+      {
+        "nombre": "Los Tuxtlas",
+        "lat": 18.58,
+        "lon": -95.15,
+        "estilo": "zona",
+        "radio": 1.3
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-071": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Bosque de Chapultepec, Ciudad de México.",
+    "puntos": [
+      {
+        "nombre": "Chapultepec",
+        "lat": 19.42,
+        "lon": -99.182,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-072": {
+    "tipo": "geografico",
+    "titulo": "Ubicación geográfica",
+    "descripcion": "Valle de los Cirios, Baja California.",
+    "puntos": [
+      {
+        "nombre": "Valle de los Cirios",
+        "lat": 28,
+        "lon": -113.3,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-073": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Tonacatecuhtli pertenece a la tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-074": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Tonacacíhuatl pertenece a la tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-075": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Centéotl pertenece a la tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-077": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Xochipilli pertenece a la tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-078": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Xochiquétzal pertenece a la tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-076": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Mayahuel pertenece a la tradición nahua y se vincula con el maguey.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.4
+      },
+      {
+        "nombre": "Puebla-Hidalgo",
+        "lat": 20,
+        "lon": -98.5,
+        "estilo": "zona",
+        "radio": 1.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-079": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Los chaneques forman parte de tradiciones del Golfo y sureste.",
+    "puntos": [
+      {
+        "nombre": "Veracruz",
+        "lat": 19.2,
+        "lon": -96.5,
+        "estilo": "zona",
+        "radio": 2.1
+      },
+      {
+        "nombre": "Tabasco",
+        "lat": 18,
+        "lon": -92.8,
+        "estilo": "zona",
+        "radio": 1.6
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-080": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Los aluxes pertenecen especialmente a la tradición maya yucateca.",
+    "puntos": [
+      {
+        "nombre": "Península de Yucatán",
+        "lat": 20.4,
+        "lon": -89,
+        "estilo": "zona",
+        "radio": 2.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-081": {
+    "tipo": "geografico",
+    "titulo": "Inspiración cultural",
+    "descripcion": "Nahual Jaguar es una creación de Temalácatl inspirada en nahualismo y simbolismo del jaguar.",
+    "puntos": [
+      {
+        "nombre": "Centro de México",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.3
+      },
+      {
+        "nombre": "Área maya",
+        "lat": 18.2,
+        "lon": -90,
+        "estilo": "zona",
+        "radio": 2.8
+      }
+    ],
+    "nota": "Mapa cultural de tradiciones inspiradoras; no representa un ser real."
+  },
+  "ENM-082": {
+    "tipo": "geografico",
+    "titulo": "Distribución aproximada en México",
+    "descripcion": "Principales regiones de presencia del jaguar en México.",
+    "puntos": [
+      {
+        "nombre": "Península de Yucatán",
+        "lat": 19.2,
+        "lon": -89.2,
+        "estilo": "zona",
+        "radio": 2.8
+      },
+      {
+        "nombre": "Chiapas",
+        "lat": 16.7,
+        "lon": -91.2,
+        "estilo": "zona",
+        "radio": 1.8
+      },
+      {
+        "nombre": "Pacífico centro",
+        "lat": 20.3,
+        "lon": -104.8,
+        "estilo": "zona",
+        "radio": 1.7
+      },
+      {
+        "nombre": "Noroeste",
+        "lat": 29,
+        "lon": -110.5,
+        "estilo": "zona",
+        "radio": 1.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-083": {
+    "tipo": "geografico",
+    "titulo": "Distribución aproximada en México",
+    "descripcion": "El ocelote se distribuye en regiones tropicales y subtropicales.",
+    "puntos": [
+      {
+        "nombre": "Golfo y Huasteca",
+        "lat": 22,
+        "lon": -98,
+        "estilo": "zona",
+        "radio": 1.8
+      },
+      {
+        "nombre": "Pacífico tropical",
+        "lat": 18,
+        "lon": -102,
+        "estilo": "zona",
+        "radio": 1.8
+      },
+      {
+        "nombre": "Sureste",
+        "lat": 17.5,
+        "lon": -91,
+        "estilo": "zona",
+        "radio": 2.5
+      },
+      {
+        "nombre": "Yucatán",
+        "lat": 20,
+        "lon": -89,
+        "estilo": "zona",
+        "radio": 1.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-084": {
+    "tipo": "geografico",
+    "titulo": "Referencia biológica",
+    "descripcion": "'Venado blanco' no es una especie independiente; el color blanco puede aparecer por albinismo o leucismo.",
+    "puntos": [
+      {
+        "nombre": "México",
+        "lat": 22.5,
+        "lon": -102,
+        "estilo": "zona",
+        "radio": 5
+      }
+    ],
+    "nota": "La zona sombreada no indica una distribución propia del 'venado blanco'."
+  },
+  "ENM-085": {
+    "tipo": "geografico",
+    "titulo": "Distribución aproximada",
+    "descripcion": "El coyote tiene una distribución muy amplia en México.",
+    "puntos": [
+      {
+        "nombre": "Norte",
+        "lat": 28,
+        "lon": -104,
+        "estilo": "zona",
+        "radio": 4
+      },
+      {
+        "nombre": "Centro",
+        "lat": 21,
+        "lon": -101,
+        "estilo": "zona",
+        "radio": 3
+      },
+      {
+        "nombre": "Occidente",
+        "lat": 21,
+        "lon": -105,
+        "estilo": "zona",
+        "radio": 2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-086": {
+    "tipo": "geografico",
+    "titulo": "Distribución aproximada",
+    "descripcion": "Mono araña principalmente en selvas del sureste mexicano.",
+    "puntos": [
+      {
+        "nombre": "Chiapas-Tabasco",
+        "lat": 17.2,
+        "lon": -92.3,
+        "estilo": "zona",
+        "radio": 2
+      },
+      {
+        "nombre": "Península de Yucatán",
+        "lat": 19.5,
+        "lon": -89.5,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-087": {
+    "tipo": "geografico",
+    "titulo": "Distribución restringida",
+    "descripcion": "El teporingo es endémico de montañas volcánicas del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Eje volcánico central",
+        "lat": 19.1,
+        "lon": -98.9,
+        "estilo": "zona",
+        "radio": 1.2
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-097": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito mitológico",
+    "descripcion": "Omeyocan se representa como nivel celeste asociado con la dualidad primordial.",
+    "ambito": "cielo_superior",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-098": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito mitológico",
+    "descripcion": "Mictlán pertenece a la geografía sagrada del mundo de los muertos.",
+    "ambito": "inframundo",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-099": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito mitológico",
+    "descripcion": "Tlalocan es un ámbito sobrenatural asociado con Tláloc, lluvia y abundancia.",
+    "ambito": "paraiso_lluvia",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-100": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito mitológico",
+    "descripcion": "Tamoanchan es un lugar primordial y mítico cuya descripción varía entre fuentes.",
+    "ambito": "lugar_primordial",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-101": {
+    "tipo": "geografico",
+    "titulo": "Ubicación arqueológica",
+    "descripcion": "Teotihuacán, Estado de México.",
+    "puntos": [
+      {
+        "nombre": "Teotihuacán",
+        "lat": 19.6925,
+        "lon": -98.8438,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-102": {
+    "tipo": "geografico",
+    "titulo": "Ubicación arqueológica",
+    "descripcion": "Chichén Itzá, Yucatán.",
+    "puntos": [
+      {
+        "nombre": "Chichén Itzá",
+        "lat": 20.6843,
+        "lon": -88.5678,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-103": {
+    "tipo": "geografico",
+    "titulo": "Ubicación arqueológica",
+    "descripcion": "Monte Albán, Oaxaca.",
+    "puntos": [
+      {
+        "nombre": "Monte Albán",
+        "lat": 17.043,
+        "lon": -96.767,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-104": {
+    "tipo": "geografico",
+    "titulo": "Ubicación arqueológica",
+    "descripcion": "El Tajín, Veracruz.",
+    "puntos": [
+      {
+        "nombre": "El Tajín",
+        "lat": 20.448,
+        "lon": -97.378,
+        "estilo": "point"
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-105": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito cosmológico",
+    "descripcion": "Ometéotl se presenta en algunas interpretaciones como principio de dualidad creadora.",
+    "ambito": "cielo_superior",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-106": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito mitológico",
+    "descripcion": "Mictlantecuhtli se asocia con Mictlán.",
+    "ambito": "inframundo",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-107": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito mitológico",
+    "descripcion": "Mictecacíhuatl se asocia con Mictlán.",
+    "ambito": "inframundo",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-108": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Ehécatl-Quetzalcóatl tuvo culto en distintas ciudades; se marca el centro de México como referencia.",
+    "puntos": [
+      {
+        "nombre": "Centro de México",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-109": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito cosmológico",
+    "descripcion": "Citlalicue se vincula con cielo y estrellas en fuentes nahuas.",
+    "ambito": "cielo",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-110": {
+    "tipo": "cosmologico",
+    "titulo": "Ámbito cosmológico",
+    "descripcion": "Citlaltonac se vincula con cielo y estrellas en fuentes nahuas.",
+    "ambito": "cielo",
+    "nota": "Representación simbólica de una idea cosmológica; no corresponde a una ubicación geográfica real."
+  },
+  "ENM-111": {
+    "tipo": "geografico",
+    "titulo": "Origen cultural de la inspiración",
+    "descripcion": "La variante 'Alfa' es ficticia; las tzitzimime están documentadas en tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "El mapa corresponde a la tradición de las tzitzimime, no a la variante ficticia 'Alfa'."
+  },
+  "ENM-112": {
+    "tipo": "geografico",
+    "titulo": "Origen cultural de la inspiración",
+    "descripcion": "La variante 'Lunar' es ficticia; las tzitzimime están documentadas en tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "El mapa corresponde a la tradición de las tzitzimime, no a la variante ficticia 'Lunar'."
+  },
+  "ENM-113": {
+    "tipo": "geografico",
+    "titulo": "Origen cultural de la inspiración",
+    "descripcion": "La variante 'Solar' es ficticia; las tzitzimime están documentadas en tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "El mapa corresponde a la tradición de las tzitzimime, no a la variante ficticia 'Solar'."
+  },
+  "ENM-114": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Camazotz pertenece a la tradición maya k'iche'; se muestra el área maya de Guatemala y el sureste mesoamericano.",
+    "puntos": [
+      {
+        "nombre": "Área maya k'iche'",
+        "lat": 14.8,
+        "lon": -91.2,
+        "estilo": "zona",
+        "radio": 1.6
+      },
+      {
+        "nombre": "Chiapas",
+        "lat": 16.5,
+        "lon": -92.7,
+        "estilo": "zona",
+        "radio": 1.2
+      }
+    ],
+    "nota": "La tradición k'iche' se localiza principalmente en Guatemala."
+  },
+  "ENM-115": {
+    "tipo": "geografico",
+    "titulo": "Región cultural asociada",
+    "descripcion": "Las Cihuateteo pertenecen a tradición nahua del centro de México.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-116": {
+    "tipo": "geografico",
+    "titulo": "Inspiración cultural",
+    "descripcion": "Nahual Águila es una creación de Temalácatl inspirada en nahualismo y simbolismo del águila.",
+    "puntos": [
+      {
+        "nombre": "Altiplano Central",
+        "lat": 19.4,
+        "lon": -99.1,
+        "estilo": "zona",
+        "radio": 2.5
+      }
+    ],
+    "nota": "Mapa cultural de la tradición inspiradora; no representa un ser real."
+  },
+  "ENM-117": {
+    "tipo": "geografico",
+    "titulo": "Distribución aproximada en México",
+    "descripcion": "Águila real principalmente en regiones abiertas, áridas y montañosas del norte y centro.",
+    "puntos": [
+      {
+        "nombre": "Norte",
+        "lat": 28,
+        "lon": -104.5,
+        "estilo": "zona",
+        "radio": 3.5
+      },
+      {
+        "nombre": "Altiplano",
+        "lat": 23,
+        "lon": -102,
+        "estilo": "zona",
+        "radio": 2.5
+      },
+      {
+        "nombre": "Centro",
+        "lat": 20.5,
+        "lon": -100.5,
+        "estilo": "zona",
+        "radio": 1.6
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-118": {
+    "tipo": "geografico",
+    "titulo": "Distribución de referencia",
+    "descripcion": "Quetzal mesoamericano en bosques húmedos de montaña del sureste.",
+    "puntos": [
+      {
+        "nombre": "Chiapas",
+        "lat": 15.8,
+        "lon": -92.8,
+        "estilo": "zona",
+        "radio": 1.5
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  },
+  "ENM-119": {
+    "tipo": "geografico",
+    "titulo": "Distribución de referencia",
+    "descripcion": "Guacamaya roja principalmente en selvas del sureste mexicano.",
+    "puntos": [
+      {
+        "nombre": "Selva Lacandona",
+        "lat": 16.8,
+        "lon": -91,
+        "estilo": "zona",
+        "radio": 1.8
+      }
+    ],
+    "nota": "Mapa ilustrado de referencia; las zonas de distribución son aproximadas."
+  }
+}
