@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Temalácatl Códice</title>
 
   <style>
@@ -63,10 +62,26 @@
       border-bottom: 4px solid #c99b37;
     }
 
-    .imagen-principal {
+    .media-wrapper {
       width: 100%;
-      height: auto;
       display: block;
+    }
+
+    .imagen-principal,
+    .video-principal {
+      width: 100%;
+      display: block;
+      height: auto;
+      background: black;
+    }
+
+    .video-nota {
+      margin: 0;
+      padding: 12px 16px;
+      text-align: center;
+      color: #f4e5bd;
+      background: #102a1e;
+      font-size: 14px;
     }
 
     .contenido {
@@ -187,284 +202,151 @@
   </style>
 </head>
 
-
 <body>
 
   <main class="contenedor" id="pagina">
 
     <header class="encabezado">
-
       <div class="codigo" id="codigo"></div>
-
-      <h1 id="nombre">
-        Cargando...
-      </h1>
-
+      <h1 id="nombre">Cargando...</h1>
       <p class="cientifico" id="subtitulo"></p>
-
     </header>
 
-
-    <section class="hero" id="hero">
-
-      <img
-        id="imagen"
-        class="imagen-principal"
-        alt=""
-      >
-
+    <section class="hero">
+      <div id="media-container" class="media-wrapper"></div>
+      <p id="video-nota" class="video-nota" style="display:none;">
+        Toca el video para escuchar el sonido.
+      </p>
     </section>
-
 
     <section class="contenido">
 
-
       <div id="secciones"></div>
 
-
       <article class="tarjeta">
-
-        <h2>
-          📌 Datos generales
-        </h2>
-
-        <div
-          class="datos"
-          id="datos-generales">
-        </div>
-
+        <h2>📌 Datos generales</h2>
+        <div class="datos" id="datos-generales"></div>
       </article>
-
 
       <article class="tarjeta temalacatl">
-
-        <h2>
-          ⚔️ En Temalácatl
-        </h2>
-
-        <div
-          class="datos"
-          id="datos-temalacatl">
-        </div>
-
+        <h2>⚔️ En Temalácatl</h2>
+        <div class="datos" id="datos-temalacatl"></div>
         <p id="lore"></p>
-
       </article>
-
 
       <article class="tarjeta fuentes">
-
-        <h2>
-          📚 Fuentes
-        </h2>
-
+        <h2>📚 Fuentes</h2>
         <ul id="fuentes"></ul>
-
       </article>
-
 
     </section>
 
-
     <footer>
-
-      <strong>
-        Temalácatl Códice
-      </strong>
-
-      <p>
-        Conoce México a través de sus cartas
-      </p>
-
+      <strong>Temalácatl Códice</strong>
+      <p>Conoce México a través de sus cartas</p>
     </footer>
 
   </main>
 
-
   <script>
 
     async function cargarCarta() {
-
       try {
+        const parametros = new URLSearchParams(window.location.search);
+        const id = parametros.get("id") || "ENM-047";
 
-        /*
-        Lee el ID que venga en la dirección.
-
-        Ejemplo:
-        ?id=ENM-047
-
-        Mientras estamos haciendo pruebas,
-        si no existe ID abrirá Jaguar.
-        */
-
-        const parametros =
-          new URLSearchParams(window.location.search);
-
-        const id =
-          parametros.get("id") || "ENM-047";
-
-
-        /*
-        Cargar base de datos
-        */
-
-        const respuesta =
-          await fetch("cards.json");
+        const respuesta = await fetch("cards.json");
 
         if (!respuesta.ok) {
           throw new Error("No se pudo cargar cards.json");
         }
 
-        const baseDatos =
-          await respuesta.json();
-
-
-        /*
-        Buscar carta
-        */
-
-        const carta =
-          baseDatos[id];
-
+        const baseDatos = await respuesta.json();
+        const carta = baseDatos[id];
 
         if (!carta) {
-
           document.getElementById("pagina").innerHTML = `
             <div class="error">
               <h1>Carta no encontrada</h1>
-              <p>
-                No existe una carta registrada con el código
-                <strong>${id}</strong>.
-              </p>
+              <p>No existe una carta registrada con el código <strong>${id}</strong>.</p>
             </div>
           `;
-
           return;
         }
 
+        document.title = carta.nombre + " | Temalácatl Códice";
 
-        /*
-        Título del navegador
-        */
-
-        document.title =
-          carta.nombre + " | Temalácatl Códice";
-
-
-        /*
-        Encabezado
-        */
-
-        document.getElementById("codigo")
-          .textContent =
+        document.getElementById("codigo").textContent =
           `TEMALÁCATL CÓDICE · ${carta.codigo}`;
 
-        document.getElementById("nombre")
-          .textContent =
+        document.getElementById("nombre").textContent =
           carta.nombre;
 
-        document.getElementById("subtitulo")
-          .textContent =
+        document.getElementById("subtitulo").textContent =
           carta.subtitulo || "";
 
+        const mediaContainer = document.getElementById("media-container");
+        const videoNota = document.getElementById("video-nota");
 
-        /*
-        Imagen
-        */
+        if (carta.multimedia && carta.multimedia.video) {
+          mediaContainer.innerHTML = `
+            <video
+              class="video-principal"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+              poster="${carta.multimedia.imagen || ""}">
+              <source src="${carta.multimedia.video}" type="video/mp4">
+              Tu navegador no soporta video HTML5.
+            </video>
+          `;
+          videoNota.style.display = "block";
+        } else if (carta.multimedia && carta.multimedia.imagen) {
+          mediaContainer.innerHTML = `
+            <img
+              src="${carta.multimedia.imagen}"
+              alt="${carta.nombre}"
+              class="imagen-principal">
+          `;
+          videoNota.style.display = "none";
+        } else {
+          mediaContainer.innerHTML = "";
+          videoNota.style.display = "none";
+        }
 
-        const imagen =
-          document.getElementById("imagen");
-
-        imagen.src =
-          carta.multimedia.imagen;
-
-        imagen.alt =
-          carta.nombre;
-
-
-        /*
-        Secciones culturales
-        */
-
-        const contenedorSecciones =
-          document.getElementById("secciones");
-
+        const contenedorSecciones = document.getElementById("secciones");
+        contenedorSecciones.innerHTML = "";
 
         carta.secciones.forEach(seccion => {
-
-          const bloque =
-            document.createElement("article");
-
-          bloque.className =
-            "tarjeta";
-
+          const bloque = document.createElement("article");
+          bloque.className = "tarjeta";
           bloque.innerHTML = `
-            <h2>
-              ${seccion.icono || ""}
-              ${seccion.titulo}
-            </h2>
-
-            <p>
-              ${seccion.contenido}
-            </p>
+            <h2>${seccion.icono || ""} ${seccion.titulo}</h2>
+            <p>${seccion.contenido}</p>
           `;
-
           contenedorSecciones.appendChild(bloque);
-
         });
 
-
-        /*
-        Datos generales
-        */
-
-        const datosGenerales =
-          document.getElementById("datos-generales");
-
+        const datosGenerales = document.getElementById("datos-generales");
+        datosGenerales.innerHTML = "";
 
         carta.datos_generales.forEach(dato => {
-
-          const bloque =
-            document.createElement("div");
-
-          bloque.className =
-            "dato";
-
+          const bloque = document.createElement("div");
+          bloque.className = "dato";
           bloque.innerHTML = `
-            <strong>
-              ${dato.nombre}
-            </strong>
-
+            <strong>${dato.nombre}</strong>
             ${dato.valor}
           `;
-
           datosGenerales.appendChild(bloque);
-
         });
 
+        const t = carta.temalacatl;
+        const atk = t.atk === null ? "—" : t.atk;
+        const def = t.def === null ? "—" : t.def;
 
-        /*
-        Información del TCG
-        */
-
-        const t =
-          carta.temalacatl;
-
-        const atk =
-          t.atk === null
-          ? "—"
-          : t.atk;
-
-        const def =
-          t.def === null
-          ? "—"
-          : t.def;
-
-
-        document.getElementById(
-          "datos-temalacatl"
-        ).innerHTML = `
-
+        document.getElementById("datos-temalacatl").innerHTML = `
           <div class="dato">
             <strong>Tipo</strong>
             ${t.tipo || "—"}
@@ -484,123 +366,61 @@
             <strong>DEF</strong>
             ${def}
           </div>
-
         `;
 
-
-        /*
-        Lore
-        */
-
-        const lore =
-          document.getElementById("lore");
+        const lore = document.getElementById("lore");
 
         if (t.lore) {
-
           lore.innerHTML = `
             <br>
             <strong>Lore de Temalácatl</strong><br><br>
             ${t.lore}
           `;
-
+          lore.style.display = "block";
         } else {
-
-          lore.style.display =
-            "none";
-
+          lore.style.display = "none";
         }
 
-
-        /*
-        Fuentes
-        */
-
-        const listaFuentes =
-          document.getElementById("fuentes");
-
+        const listaFuentes = document.getElementById("fuentes");
+        listaFuentes.innerHTML = "";
 
         carta.fuentes.forEach(fuente => {
-
-          const elemento =
-            document.createElement("li");
-
+          const elemento = document.createElement("li");
 
           if (fuente.url) {
-
             elemento.innerHTML = `
-              <strong>
-                ${fuente.institucion}
-              </strong>
-
-              ${fuente.titulo
-                ? " — " + fuente.titulo
-                : ""
-              }
-
+              <strong>${fuente.institucion}</strong>
+              ${fuente.titulo ? " — " + fuente.titulo : ""}
               <br>
-
-              <a
-                href="${fuente.url}"
-                target="_blank"
-                rel="noopener noreferrer">
+              <a href="${fuente.url}" target="_blank" rel="noopener noreferrer">
                 Consultar fuente
               </a>
             `;
-
           } else {
-
             elemento.innerHTML = `
-              <strong>
-                ${fuente.institucion}
-              </strong>
-
-              ${fuente.titulo
-                ? " — " + fuente.titulo
-                : ""
-              }
+              <strong>${fuente.institucion}</strong>
+              ${fuente.titulo ? " — " + fuente.titulo : ""}
             `;
-
           }
 
-
-          listaFuentes.appendChild(
-            elemento
-          );
-
+          listaFuentes.appendChild(elemento);
         });
 
-
       } catch (error) {
-
         console.error(error);
 
-        document.getElementById("pagina")
-          .innerHTML = `
-
+        document.getElementById("pagina").innerHTML = `
           <div class="error">
-
-            <h1>
-              Error al cargar el Códice
-            </h1>
-
-            <p>
-              No fue posible cargar la información
-              de esta carta.
-            </p>
-
+            <h1>Error al cargar el Códice</h1>
+            <p>No fue posible cargar la información de esta carta.</p>
           </div>
-
         `;
-
       }
-
     }
-
 
     cargarCarta();
 
   </script>
 
 </body>
-
 </html>
