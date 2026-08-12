@@ -2,10 +2,18 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Temalácatl Códice</title>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Temalácatl Códice
+  </title>
+
 
   <style>
 
@@ -13,244 +21,717 @@
       box-sizing: border-box;
     }
 
+
     body {
+
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #07140f;
-      color: #222;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background:
+        #07140f;
+
+      color:
+        #222;
+
     }
+
 
     .contenedor {
+
       max-width: 700px;
+
       margin: auto;
-      background: #eee5d2;
-      min-height: 100vh;
+
+      background:
+        #eee5d2;
+
+      min-height:
+        100vh;
+
     }
+
+
+
+    /* ================================
+       ENCABEZADO
+    ================================= */
+
 
     .encabezado {
-      background: #06291d;
-      color: white;
-      text-align: center;
-      padding: 28px 20px 30px;
-      border-bottom: 4px solid #c99b37;
+
+      background:
+        #06291d;
+
+      color:
+        white;
+
+      text-align:
+        center;
+
+      padding:
+        28px 20px 30px;
+
+      border-bottom:
+        4px solid #c99b37;
+
     }
+
 
     .codigo {
-      color: #d8ad4d;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+
+      color:
+        #d8ad4d;
+
+      font-size:
+        13px;
+
+      letter-spacing:
+        2px;
+
+      text-transform:
+        uppercase;
+
     }
+
 
     .encabezado h1 {
-      margin: 10px 0 4px;
-      font-family: Georgia, serif;
-      font-size: 38px;
-      color: #f4e5bd;
+
+      margin:
+        10px 0 4px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        38px;
+
+      color:
+        #f4e5bd;
+
     }
+
 
     .subtitulo {
+
       margin: 0;
-      font-size: 19px;
-      font-style: italic;
-      color: #d8ad4d;
+
+      font-size:
+        19px;
+
+      font-style:
+        italic;
+
+      color:
+        #d8ad4d;
+
     }
 
-    /* VIDEO */
+
+
+    /* ================================
+       VIDEO
+    ================================= */
+
 
     .hero {
-      width: 100%;
-      background: #020806;
-      border-bottom: 4px solid #c99b37;
+
+      width:
+        100%;
+
+      background:
+        black;
+
     }
+
 
     .video-principal {
-      display: block;
-      width: 100%;
-      height: auto;
-      background: black;
+
+      width:
+        100%;
+
+      display:
+        block;
+
+      height:
+        auto;
+
+      background:
+        black;
+
     }
+
 
     .video-proximamente {
-      min-height: 260px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background: #061c13;
-      color: #f4e5bd;
-      text-align: center;
-      padding: 30px;
+
+      min-height:
+        280px;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      text-align:
+        center;
+
+      background:
+        #061c13;
+
+      color:
+        #f4e5bd;
+
+      padding:
+        30px;
+
     }
+
 
     .video-proximamente span {
-      font-size: 45px;
-      margin-bottom: 12px;
+
+      font-size:
+        50px;
+
+      margin-bottom:
+        15px;
+
     }
+
+
+
+    /* ================================
+       SONIDO
+    ================================= */
+
 
     .controles-sonido {
-      background: #0b2e20;
-      text-align: center;
-      padding: 12px;
+
+      background:
+        #09281c;
+
+      text-align:
+        center;
+
+      padding:
+        11px;
+
+      border-bottom:
+        1px solid #315242;
+
     }
+
 
     .boton-sonido {
-      border: 1px solid #d6aa4b;
-      background: #123c2b;
-      color: #f4e5bd;
-      padding: 11px 22px;
-      border-radius: 25px;
-      font-size: 15px;
-      cursor: pointer;
+
+      border:
+        1px solid #d6aa4b;
+
+      background:
+        #123c2b;
+
+      color:
+        #f4e5bd;
+
+      padding:
+        10px 22px;
+
+      border-radius:
+        25px;
+
+      font-size:
+        15px;
+
+      cursor:
+        pointer;
+
     }
+
 
     .boton-sonido:hover {
-      background: #19543b;
+
+      background:
+        #19543b;
+
     }
 
-    /* CONTENIDO */
+
+
+    /* ================================
+       PESTAÑAS
+    ================================= */
+
+
+    .tabs {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      background:
+        #061c13;
+
+      border-bottom:
+        4px solid #c99b37;
+
+    }
+
+
+    .tab-button {
+
+      border:
+        none;
+
+      padding:
+        17px 10px;
+
+      font-size:
+        16px;
+
+      font-weight:
+        bold;
+
+      cursor:
+        pointer;
+
+      background:
+        #0b2e20;
+
+      color:
+        #c9b98c;
+
+      transition:
+        0.2s;
+
+    }
+
+
+    .tab-button:first-child {
+
+      border-right:
+        1px solid #315242;
+
+    }
+
+
+    .tab-button:hover {
+
+      background:
+        #123c2b;
+
+    }
+
+
+    .tab-button.active {
+
+      background:
+        #eee5d2;
+
+      color:
+        #123c2b;
+
+      box-shadow:
+        inset 0 -4px 0 #b88b32;
+
+    }
+
+
+
+    /* ================================
+       CONTENIDO
+    ================================= */
+
 
     .contenido {
-      padding: 18px;
+
+      padding:
+        18px;
+
     }
+
+
+    .tab-content {
+
+      display:
+        none;
+
+    }
+
+
+    .tab-content.active {
+
+      display:
+        block;
+
+    }
+
+
+
+    /* ================================
+       TARJETAS
+    ================================= */
+
 
     .tarjeta {
-      background: #fffaf0;
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 15px;
-      border-left: 5px solid #b88b32;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+
+      background:
+        #fffaf0;
+
+      border-radius:
+        14px;
+
+      padding:
+        20px;
+
+      margin-bottom:
+        15px;
+
+      border-left:
+        5px solid #b88b32;
+
+      box-shadow:
+        0 3px 10px
+        rgba(0,0,0,0.10);
+
     }
+
 
     .tarjeta h2 {
-      margin-top: 0;
-      color: #123c2b;
-      font-size: 21px;
+
+      margin-top:
+        0;
+
+      color:
+        #123c2b;
+
+      font-size:
+        21px;
+
     }
+
 
     .tarjeta h3 {
-      color: #123c2b;
-      margin-bottom: 7px;
+
+      color:
+        #123c2b;
+
     }
+
 
     .tarjeta p {
-      line-height: 1.65;
+
+      line-height:
+        1.65;
+
+      margin-bottom:
+        0;
+
     }
+
+
+
+    /* ================================
+       DATOS CULTURALES
+    ================================= */
+
 
     .datos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 14px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:
+        10px;
+
+      margin-top:
+        14px;
+
     }
+
 
     .dato {
-      background: #f2e7ce;
-      padding: 14px;
-      border-radius: 10px;
-      text-align: center;
+
+      background:
+        #f2e7ce;
+
+      padding:
+        14px;
+
+      border-radius:
+        10px;
+
+      text-align:
+        center;
+
     }
+
 
     .dato strong {
-      display: block;
-      color: #123c2b;
-      margin-bottom: 5px;
+
+      display:
+        block;
+
+      color:
+        #123c2b;
+
+      margin-bottom:
+        5px;
+
     }
 
-    /* TEMALACATL */
+
+
+    /* ================================
+       PESTAÑA TEMALÁCATL
+    ================================= */
+
 
     .temalacatl {
-      background: #0b2e20;
-      color: white;
-      border-left: 5px solid #d6aa4b;
+
+      background:
+        #0b2e20;
+
+      color:
+        white;
+
+      border-left:
+        5px solid #d6aa4b;
+
     }
+
 
     .temalacatl h2,
     .temalacatl h3 {
-      color: #f3d993;
+
+      color:
+        #f3d993;
+
     }
+
 
     .temalacatl .dato {
-      background: #f4ead4;
-      color: #222;
+
+      background:
+        #f4ead4;
+
+      color:
+        #222;
+
     }
 
-    .efecto {
-      margin-top: 18px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(214,170,75,0.5);
-      padding: 17px;
-      border-radius: 12px;
+
+    .bloque-juego {
+
+      margin-top:
+        18px;
+
+      background:
+        rgba(255,255,255,0.08);
+
+      border:
+        1px solid
+        rgba(214,170,75,0.5);
+
+      border-radius:
+        12px;
+
+      padding:
+        18px;
+
     }
 
-    .efecto strong {
-      color: #f3d993;
+
+    .bloque-juego h3 {
+
+      margin-top:
+        0;
+
     }
 
-    /* FUENTES */
+
+    .bloque-juego p {
+
+      margin-bottom:
+        0;
+
+      line-height:
+        1.65;
+
+    }
+
+
+
+    /* ================================
+       FUENTES
+    ================================= */
+
 
     .fuentes ul {
-      padding-left: 20px;
+
+      padding-left:
+        20px;
+
     }
+
 
     .fuentes li {
-      margin-bottom: 14px;
-      line-height: 1.5;
+
+      margin-bottom:
+        15px;
+
+      line-height:
+        1.5;
+
     }
+
 
     .fuentes a {
-      color: #0b5c42;
-      font-weight: bold;
+
+      color:
+        #0b5c42;
+
+      font-weight:
+        bold;
+
+      text-decoration:
+        none;
+
     }
 
-    .sin-fuentes {
-      color: #665d4d;
-      font-style: italic;
+
+    .fuentes a:hover {
+
+      text-decoration:
+        underline;
+
     }
 
-    /* ERROR */
+
+
+    /* ================================
+       ERROR
+    ================================= */
+
 
     .error {
-      padding: 50px 20px;
-      text-align: center;
-      color: white;
+
+      padding:
+        50px 20px;
+
+      text-align:
+        center;
+
+      color:
+        white;
+
     }
+
+
+
+    /* ================================
+       PIE
+    ================================= */
+
 
     footer {
-      background: #061c13;
-      color: #d8ad4d;
-      text-align: center;
-      padding: 25px 15px;
-      border-top: 3px solid #c99b37;
+
+      background:
+        #061c13;
+
+      color:
+        #d8ad4d;
+
+      text-align:
+        center;
+
+      padding:
+        25px 15px;
+
+      border-top:
+        3px solid #c99b37;
+
     }
+
 
     footer strong {
-      font-family: Georgia, serif;
-      font-size: 22px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        22px;
+
     }
+
 
     footer p {
-      margin-bottom: 0;
+
+      margin-bottom:
+        0;
+
     }
 
-    @media (max-width: 500px) {
+
+
+    /* ================================
+       CELULAR
+    ================================= */
+
+
+    @media
+    (max-width: 500px) {
+
 
       .encabezado h1 {
-        font-size: 31px;
+
+        font-size:
+          31px;
+
       }
+
 
       .contenido {
-        padding: 12px;
+
+        padding:
+          12px;
+
       }
+
 
       .tarjeta {
-        padding: 17px;
+
+        padding:
+          17px;
+
       }
 
-      .datos {
-        grid-template-columns: 1fr 1fr;
+
+      .tab-button {
+
+        font-size:
+          14px;
+
+        padding:
+          15px 5px;
+
       }
+
 
     }
 
@@ -259,136 +740,275 @@
 </head>
 
 
+
 <body>
 
-<main class="contenedor" id="pagina">
+
+<main
+  class="contenedor"
+  id="pagina"
+>
 
 
-  <!-- ENCABEZADO -->
+  <!-- ===============================
+       ENCABEZADO
+  ================================= -->
 
-  <header class="encabezado">
+
+  <header
+    class="encabezado"
+  >
+
 
     <div
       class="codigo"
-      id="codigo">
+      id="codigo"
+    >
     </div>
 
-    <h1 id="nombre">
+
+    <h1
+      id="nombre"
+    >
+
       Cargando...
+
     </h1>
+
 
     <p
       class="subtitulo"
-      id="subtitulo">
+      id="subtitulo"
+    >
     </p>
+
 
   </header>
 
 
-  <!-- VIDEO -->
 
-  <section class="hero">
+  <!-- ===============================
+       VIDEO
+  ================================= -->
 
-    <div id="media-container">
+
+  <section
+    class="hero"
+  >
+
+
+    <div
+      id="media-container"
+    >
     </div>
+
 
     <div
       class="controles-sonido"
       id="controles-sonido"
-      style="display:none;">
+      style="display:none;"
+    >
+
 
       <button
         class="boton-sonido"
-        id="boton-sonido">
+        id="boton-sonido"
+      >
 
         🔊 Activar sonido
 
       </button>
 
+
     </div>
+
 
   </section>
 
 
-  <!-- CONTENIDO -->
 
-  <section class="contenido">
+  <!-- ===============================
+       PESTAÑAS
+  ================================= -->
 
 
-    <!-- CÓDICE CULTURAL -->
+  <nav
+    class="tabs"
+  >
 
-    <div id="secciones">
+
+    <button
+      class="tab-button active"
+      id="btn-cultural"
+      onclick="abrirPestana('cultural')"
+    >
+
+      🏺 Datos culturales
+
+    </button>
+
+
+    <button
+      class="tab-button"
+      id="btn-temalacatl"
+      onclick="abrirPestana('temalacatl')"
+    >
+
+      ⚔️ Temalácatl
+
+    </button>
+
+
+  </nav>
+
+
+
+  <!-- ===============================
+       DATOS CULTURALES
+  ================================= -->
+
+
+  <section
+    class="contenido tab-content active"
+    id="tab-cultural"
+  >
+
+
+    <div
+      id="secciones-culturales"
+    >
     </div>
 
 
-    <!-- DATOS GENERALES -->
 
-    <article class="tarjeta">
+    <article
+      class="tarjeta"
+    >
+
 
       <h2>
-        📌 Datos generales
+
+        📌 Datos culturales generales
+
       </h2>
+
 
       <div
         class="datos"
-        id="datos-generales">
+        id="datos-generales"
+      >
       </div>
+
 
     </article>
 
 
-    <!-- DATOS DEL JUEGO -->
 
-    <article class="tarjeta temalacatl">
+    <article
+      class="tarjeta fuentes"
+    >
+
 
       <h2>
-        ⚔️ En Temalácatl
+
+        📚 Fuentes y referencias
+
       </h2>
 
-      <div
-        class="datos"
-        id="datos-temalacatl">
-      </div>
-
 
       <div
-        id="descripcion-juego">
+        id="contenedor-fuentes"
+      >
       </div>
 
-
-      <div
-        id="efecto-juego">
-      </div>
-
-    </article>
-
-
-    <!-- FUENTES -->
-
-    <article class="tarjeta fuentes">
-
-      <h2>
-        📚 Fuentes
-      </h2>
-
-      <div id="contenedor-fuentes">
-      </div>
 
     </article>
 
 
   </section>
+
+
+
+  <!-- ===============================
+       TEMALÁCATL
+  ================================= -->
+
+
+  <section
+    class="contenido tab-content"
+    id="tab-temalacatl"
+  >
+
+
+    <article
+      class="tarjeta temalacatl"
+    >
+
+
+      <h2>
+
+        ⚔️ Información de la carta
+
+      </h2>
+
+
+      <div
+        class="datos"
+        id="datos-temalacatl"
+      >
+      </div>
+
+
+
+      <div
+        id="descripcion-juego"
+      >
+      </div>
+
+
+
+      <div
+        id="efecto-juego"
+      >
+      </div>
+
+
+
+      <div
+        id="interpretacion-juego"
+      >
+      </div>
+
+
+    </article>
+
+
+  </section>
+
+
+
+  <!-- ===============================
+       PIE
+  ================================= -->
 
 
   <footer>
 
+
     <strong>
+
       Temalácatl Códice
+
     </strong>
 
+
     <p>
-      Conoce México a través de sus cartas
+
+      Conoce México
+      a través de sus cartas
+
     </p>
+
 
   </footer>
 
@@ -396,132 +1016,298 @@
 </main>
 
 
+
 <script>
+
+
+/*
+========================================
+CAMBIAR PESTAÑA
+========================================
+*/
+
+
+function abrirPestana(
+  pestana
+) {
+
+
+  const cultural =
+    document.getElementById(
+      "tab-cultural"
+    );
+
+
+  const temalacatl =
+    document.getElementById(
+      "tab-temalacatl"
+    );
+
+
+  const btnCultural =
+    document.getElementById(
+      "btn-cultural"
+    );
+
+
+  const btnTemalacatl =
+    document.getElementById(
+      "btn-temalacatl"
+    );
+
+
+
+  cultural.classList.remove(
+    "active"
+  );
+
+
+  temalacatl.classList.remove(
+    "active"
+  );
+
+
+  btnCultural.classList.remove(
+    "active"
+  );
+
+
+  btnTemalacatl.classList.remove(
+    "active"
+  );
+
+
+
+  if (
+    pestana ===
+    "temalacatl"
+  ) {
+
+
+    temalacatl.classList.add(
+      "active"
+    );
+
+
+    btnTemalacatl.classList.add(
+      "active"
+    );
+
+
+  } else {
+
+
+    cultural.classList.add(
+      "active"
+    );
+
+
+    btnCultural.classList.add(
+      "active"
+    );
+
+
+  }
+
+
+}
+
+
+
+/*
+========================================
+CARGAR CARTA
+========================================
+*/
+
 
 async function cargarCarta() {
 
+
   try {
 
-    /*
-    LEER ID DE LA URL
 
-    Ejemplo:
-    ?id=ENM-082
+    /*
+    LEER ID
     */
+
 
     const parametros =
       new URLSearchParams(
         window.location.search
       );
 
+
     const id =
-      parametros.get("id");
+      parametros.get(
+        "id"
+      );
 
 
-    if (!id) {
+
+    if (
+      !id
+    ) {
+
 
       document.getElementById(
         "pagina"
       ).innerHTML = `
 
+
         <div class="error">
 
+
           <h1>
+
             Temalácatl Códice
+
           </h1>
 
+
           <p>
-            Escanea el código QR de una carta
-            para consultar su información.
+
+            Escanea el código QR
+            de una carta para consultar
+            su información.
+
           </p>
+
 
         </div>
 
+
       `;
 
+
       return;
+
+
     }
+
 
 
     /*
-    CARGAR BASE DE DATOS
+    CARGAR CARDS.JSON
     */
+
 
     const respuesta =
       await fetch(
-        "cards.json?v=" + Date.now()
+
+        "cards.json?v=" +
+        Date.now()
+
       );
 
 
-    if (!respuesta.ok) {
+
+    if (
+      !respuesta.ok
+    ) {
+
 
       throw new Error(
+
         "No se pudo cargar cards.json"
+
       );
 
+
     }
+
 
 
     const baseDatos =
       await respuesta.json();
 
 
+
     /*
     BUSCAR CARTA
     */
+
 
     const carta =
       baseDatos[id];
 
 
-    if (!carta) {
+
+    if (
+      !carta
+    ) {
+
 
       document.getElementById(
         "pagina"
       ).innerHTML = `
 
+
         <div class="error">
 
+
           <h1>
+
             Carta no encontrada
+
           </h1>
 
+
           <p>
-            No existe una carta registrada con el código
-            <strong>${id}</strong>.
+
+            No existe una carta
+            registrada con el código
+
+            <strong>
+
+              ${id}
+
+            </strong>.
+
           </p>
+
 
         </div>
 
+
       `;
 
+
       return;
+
+
     }
 
 
+
     /*
-    TÍTULO
+    ========================================
+    ENCABEZADO
+    ========================================
     */
 
+
     document.title =
+
       carta.nombre +
       " | Temalácatl Códice";
 
 
-    /*
-    ENCABEZADO
-    */
 
     document.getElementById(
       "codigo"
     ).textContent =
+
       `TEMALÁCATL CÓDICE · ${carta.codigo}`;
+
 
 
     document.getElementById(
       "nombre"
     ).textContent =
+
       carta.nombre;
+
 
 
     const subtitulo =
@@ -530,26 +1316,35 @@ async function cargarCarta() {
       );
 
 
-    if (carta.subtitulo) {
+
+    if (
+      carta.subtitulo
+    ) {
+
 
       subtitulo.textContent =
         carta.subtitulo;
 
+
       subtitulo.style.display =
         "block";
 
+
     } else {
+
 
       subtitulo.style.display =
         "none";
 
+
     }
 
 
+
     /*
-    ======================================
+    ========================================
     VIDEO
-    ======================================
+    ========================================
     */
 
 
@@ -569,34 +1364,60 @@ async function cargarCarta() {
       carta.multimedia?.video;
 
 
-    if (rutaVideo) {
+
+    if (
+      rutaVideo
+    ) {
+
 
       mediaContainer.innerHTML = `
 
+
         <video
+
           id="video-principal"
+
           class="video-principal"
+
           autoplay
+
           muted
+
           loop
+
           playsinline
+
           preload="auto"
-          controls>
+
+          controls
+
+        >
+
 
           <source
-            src="${rutaVideo}"
-            type="video/mp4">
 
-          Tu navegador no puede reproducir
+            src="${rutaVideo}"
+
+            type="video/mp4"
+
+          >
+
+
+          Tu navegador
+          no puede reproducir
           este video.
 
+
         </video>
+
 
       `;
 
 
+
       controlesSonido.style.display =
         "block";
+
 
 
       const video =
@@ -605,55 +1426,30 @@ async function cargarCarta() {
         );
 
 
-      /*
-      Intentar reproducción automática.
-      */
 
-      video.muted = true;
+      video.muted =
+        true;
 
 
-      function reproducir() {
 
-        const intento =
-          video.play();
+      const intento =
+        video.play();
 
-        if (
-          intento !== undefined
-        ) {
 
-          intento.catch(
-            error => {
 
-              console.log(
-                "Esperando interacción para reproducir."
-              );
+      if (
+        intento !== undefined
+      ) {
 
-            }
-          );
 
-        }
+        intento.catch(
+          () => {}
+        );
+
 
       }
 
 
-      video.addEventListener(
-        "loadeddata",
-        reproducir
-      );
-
-
-      video.addEventListener(
-        "canplay",
-        reproducir
-      );
-
-
-      reproducir();
-
-
-      /*
-      ACTIVAR SONIDO
-      */
 
       const botonSonido =
         document.getElementById(
@@ -661,118 +1457,257 @@ async function cargarCarta() {
         );
 
 
+
       botonSonido.onclick =
         function() {
 
-          video.muted =
-            false;
 
-          video.volume =
-            1;
+          if (
+            video.muted
+          ) {
 
-          video.play();
 
-          botonSonido.textContent =
-            "🔊 Sonido activado";
+            video.muted =
+              false;
+
+
+            video.volume =
+              1;
+
+
+            video.play();
+
+
+            botonSonido.textContent =
+              "🔊 Sonido activado";
+
+
+          } else {
+
+
+            video.muted =
+              true;
+
+
+            botonSonido.textContent =
+              "🔇 Activar sonido";
+
+
+          }
+
 
         };
 
 
     } else {
 
+
       controlesSonido.style.display =
         "none";
 
 
+
       mediaContainer.innerHTML = `
 
-        <div class="video-proximamente">
+
+        <div
+          class="video-proximamente"
+        >
+
 
           <span>
+
             🎬
+
           </span>
 
+
           <strong>
+
             Video próximamente
+
           </strong>
+
 
         </div>
 
+
       `;
+
 
     }
 
 
+
     /*
-    ======================================
-    CÓDICE CULTURAL
-    ======================================
+    ========================================
+    DIVIDIR CULTURA Y JUEGO
+    ========================================
     */
 
 
-    const contenedorSecciones =
-      document.getElementById(
-        "secciones"
-      );
+    const culturales =
+      [];
 
 
-    contenedorSecciones.innerHTML =
-      "";
+    const juegoExtra =
+      [];
+
 
 
     if (
-      carta.secciones &&
-      carta.secciones.length > 0
+      carta.secciones
     ) {
 
 
       carta.secciones.forEach(
         seccion => {
 
-          const bloque =
-            document.createElement(
-              "article"
+
+          const titulo =
+
+            (
+              seccion.titulo ||
+              ""
+            )
+            .toLowerCase();
+
+
+
+          /*
+          Las secciones relacionadas
+          con el juego NO aparecen
+          en información cultural.
+          */
+
+
+          if (
+
+            titulo.includes(
+              "temalácatl"
+            )
+
+            ||
+
+            titulo.includes(
+              "ficción"
+            )
+
+            ||
+
+            titulo.includes(
+              "ficticio"
+            )
+
+            ||
+
+            titulo.includes(
+              "representación"
+            )
+
+            ||
+
+            titulo.includes(
+              "interpretación"
+            )
+
+          ) {
+
+
+            juegoExtra.push(
+              seccion
             );
 
 
-          bloque.className =
-            "tarjeta";
+          } else {
 
 
-          bloque.innerHTML = `
-
-            <h2>
-
-              ${seccion.icono || "📜"}
-
-              ${seccion.titulo}
-
-            </h2>
+            culturales.push(
+              seccion
+            );
 
 
-            <p>
+          }
 
-              ${seccion.contenido}
-
-            </p>
-
-          `;
-
-
-          contenedorSecciones.appendChild(
-            bloque
-          );
 
         }
       );
 
+
     }
 
 
+
     /*
-    ======================================
-    DATOS GENERALES
-    ======================================
+    ========================================
+    SECCIONES CULTURALES
+    ========================================
+    */
+
+
+    const contenedorCultural =
+      document.getElementById(
+        "secciones-culturales"
+      );
+
+
+    contenedorCultural.innerHTML =
+      "";
+
+
+
+    culturales.forEach(
+      seccion => {
+
+
+        const bloque =
+          document.createElement(
+            "article"
+          );
+
+
+        bloque.className =
+          "tarjeta";
+
+
+
+        bloque.innerHTML = `
+
+
+          <h2>
+
+            ${seccion.icono || "🏺"}
+
+            ${seccion.titulo}
+
+          </h2>
+
+
+          <p>
+
+            ${seccion.contenido}
+
+          </p>
+
+
+        `;
+
+
+
+        contenedorCultural.appendChild(
+          bloque
+        );
+
+
+      }
+    );
+
+
+
+    /*
+    ========================================
+    DATOS CULTURALES GENERALES
+    ========================================
     */
 
 
@@ -786,6 +1721,7 @@ async function cargarCarta() {
       "";
 
 
+
     if (
       carta.datos_generales
     ) {
@@ -793,6 +1729,7 @@ async function cargarCarta() {
 
       carta.datos_generales.forEach(
         dato => {
+
 
           const bloque =
             document.createElement(
@@ -804,192 +1741,41 @@ async function cargarCarta() {
             "dato";
 
 
+
           bloque.innerHTML = `
 
+
             <strong>
+
               ${dato.nombre}
+
             </strong>
+
 
             ${dato.valor}
 
+
           `;
+
 
 
           datosGenerales.appendChild(
             bloque
           );
 
+
         }
       );
 
-    }
-
-
-    /*
-    ======================================
-    INFORMACIÓN DEL JUEGO
-    ======================================
-    */
-
-
-    const t =
-      carta.temalacatl || {};
-
-
-    const atk =
-      t.atk === null ||
-      t.atk === undefined
-      ? "—"
-      : t.atk;
-
-
-    const def =
-      t.def === null ||
-      t.def === undefined
-      ? "—"
-      : t.def;
-
-
-    document.getElementById(
-      "datos-temalacatl"
-    ).innerHTML = `
-
-
-      <div class="dato">
-
-        <strong>
-          Categoría
-        </strong>
-
-        ${t.categoria || "—"}
-
-      </div>
-
-
-      <div class="dato">
-
-        <strong>
-          Terreno
-        </strong>
-
-        ${t.terreno || t.tipo || "—"}
-
-      </div>
-
-
-      <div class="dato">
-
-        <strong>
-          Rareza
-        </strong>
-
-        ${t.rareza || "—"}
-
-      </div>
-
-
-      <div class="dato">
-
-        <strong>
-          ATK
-        </strong>
-
-        ${atk}
-
-      </div>
-
-
-      <div class="dato">
-
-        <strong>
-          DEF
-        </strong>
-
-        ${def}
-
-      </div>
-
-    `;
-
-
-    /*
-    DESCRIPCIÓN DEL JUEGO
-    */
-
-
-    const descripcionJuego =
-      document.getElementById(
-        "descripcion-juego"
-      );
-
-
-    if (t.descripcion) {
-
-      descripcionJuego.innerHTML = `
-
-        <div class="efecto">
-
-          <h3>
-            📜 Descripción de la carta
-          </h3>
-
-          <p>
-            ${t.descripcion}
-          </p>
-
-        </div>
-
-      `;
-
-    } else {
-
-      descripcionJuego.innerHTML =
-        "";
 
     }
 
 
-    /*
-    EFECTO / HABILIDAD
-    */
-
-
-    const efectoJuego =
-      document.getElementById(
-        "efecto-juego"
-      );
-
-
-    if (t.efecto) {
-
-      efectoJuego.innerHTML = `
-
-        <div class="efecto">
-
-          <h3>
-            ✨ Efecto / Habilidad
-          </h3>
-
-          <p>
-            ${t.efecto}
-          </p>
-
-        </div>
-
-      `;
-
-    } else {
-
-      efectoJuego.innerHTML =
-        "";
-
-    }
-
 
     /*
-    ======================================
+    ========================================
     FUENTES
-    ======================================
+    ========================================
     */
 
 
@@ -999,9 +1785,20 @@ async function cargarCarta() {
       );
 
 
+
+    contenedorFuentes.innerHTML =
+      "";
+
+
+
     if (
-      carta.fuentes &&
+
+      carta.fuentes
+
+      &&
+
       carta.fuentes.length > 0
+
     ) {
 
 
@@ -1009,6 +1806,7 @@ async function cargarCarta() {
         document.createElement(
           "ul"
         );
+
 
 
       carta.fuentes.forEach(
@@ -1021,18 +1819,25 @@ async function cargarCarta() {
             );
 
 
+
           let contenido = `
 
+
             <strong>
+
               ${fuente.institucion || ""}
+
             </strong>
 
+
           `;
+
 
 
           if (
             fuente.titulo
           ) {
+
 
             contenido += `
 
@@ -1040,44 +1845,57 @@ async function cargarCarta() {
 
             `;
 
+
           }
+
 
 
           if (
             fuente.url
           ) {
 
+
             contenido += `
+
 
               <br>
 
+
               <a
+
                 href="${fuente.url}"
+
                 target="_blank"
-                rel="noopener noreferrer">
+
+                rel="noopener noreferrer"
+
+              >
 
                 Consultar fuente
 
               </a>
 
+
             `;
 
+
           }
+
 
 
           elemento.innerHTML =
             contenido;
 
 
+
           lista.appendChild(
             elemento
           );
 
-      });
 
+        }
+      );
 
-      contenedorFuentes.innerHTML =
-        "";
 
 
       contenedorFuentes.appendChild(
@@ -1090,19 +1908,329 @@ async function cargarCarta() {
 
       contenedorFuentes.innerHTML = `
 
-        <p class="sin-fuentes">
 
-          Las fuentes culturales de esta carta
-          están pendientes de integración.
+        <p>
+
+          Fuentes pendientes
+          de integración.
 
         </p>
 
+
       `;
+
 
     }
 
 
-  } catch (error) {
+
+    /*
+    ========================================
+    INFORMACIÓN TEMALÁCATL
+    ========================================
+    */
+
+
+    const t =
+      carta.temalacatl || {};
+
+
+
+    const atk =
+
+      t.atk === null
+
+      ||
+
+      t.atk === undefined
+
+      ?
+
+      "—"
+
+      :
+
+      t.atk;
+
+
+
+    const def =
+
+      t.def === null
+
+      ||
+
+      t.def === undefined
+
+      ?
+
+      "—"
+
+      :
+
+      t.def;
+
+
+
+    document.getElementById(
+      "datos-temalacatl"
+    ).innerHTML = `
+
+
+      <div class="dato">
+
+        <strong>
+
+          Categoría
+
+        </strong>
+
+        ${t.categoria || "—"}
+
+      </div>
+
+
+
+      <div class="dato">
+
+        <strong>
+
+          Terreno
+
+        </strong>
+
+        ${t.terreno || t.tipo || "—"}
+
+      </div>
+
+
+
+      <div class="dato">
+
+        <strong>
+
+          Rareza
+
+        </strong>
+
+        ${t.rareza || "—"}
+
+      </div>
+
+
+
+      <div class="dato">
+
+        <strong>
+
+          ATK
+
+        </strong>
+
+        ${atk}
+
+      </div>
+
+
+
+      <div class="dato">
+
+        <strong>
+
+          DEF
+
+        </strong>
+
+        ${def}
+
+      </div>
+
+
+    `;
+
+
+
+    /*
+    DESCRIPCIÓN
+    */
+
+
+    const descripcion =
+      document.getElementById(
+        "descripcion-juego"
+      );
+
+
+
+    if (
+      t.descripcion
+    ) {
+
+
+      descripcion.innerHTML = `
+
+
+        <div
+          class="bloque-juego"
+        >
+
+
+          <h3>
+
+            📜 Descripción
+
+          </h3>
+
+
+          <p>
+
+            ${t.descripcion}
+
+          </p>
+
+
+        </div>
+
+
+      `;
+
+
+    } else {
+
+
+      descripcion.innerHTML =
+        "";
+
+
+    }
+
+
+
+    /*
+    EFECTO
+    */
+
+
+    const efecto =
+      document.getElementById(
+        "efecto-juego"
+      );
+
+
+
+    if (
+      t.efecto
+    ) {
+
+
+      efecto.innerHTML = `
+
+
+        <div
+          class="bloque-juego"
+        >
+
+
+          <h3>
+
+            ✨ Efecto / Habilidad
+
+          </h3>
+
+
+          <p>
+
+            ${t.efecto}
+
+          </p>
+
+
+        </div>
+
+
+      `;
+
+
+    } else {
+
+
+      efecto.innerHTML =
+        "";
+
+
+    }
+
+
+
+    /*
+    SECCIONES QUE PERTENECEN AL JUEGO
+    */
+
+
+    const interpretacion =
+      document.getElementById(
+        "interpretacion-juego"
+      );
+
+
+    interpretacion.innerHTML =
+      "";
+
+
+
+    juegoExtra.forEach(
+      seccion => {
+
+
+        const bloque =
+          document.createElement(
+            "div"
+          );
+
+
+        bloque.className =
+          "bloque-juego";
+
+
+
+        bloque.innerHTML = `
+
+
+          <h3>
+
+            ${seccion.icono || "🎴"}
+
+            ${seccion.titulo}
+
+          </h3>
+
+
+          <p>
+
+            ${seccion.contenido}
+
+          </p>
+
+
+        `;
+
+
+
+        interpretacion.appendChild(
+          bloque
+        );
+
+
+      }
+    );
+
+
+  }
+
+
+  catch (
+    error
+  ) {
 
 
     console.error(
@@ -1110,34 +2238,55 @@ async function cargarCarta() {
     );
 
 
+
     document.getElementById(
       "pagina"
     ).innerHTML = `
 
+
       <div class="error">
 
+
         <h1>
-          Error al cargar el Códice
+
+          Error al cargar
+          el Códice
+
         </h1>
 
+
         <p>
+
           No fue posible cargar
           la información de esta carta.
+
         </p>
+
 
       </div>
 
+
     `;
 
+
   }
+
 
 }
 
 
+
+/*
+INICIAR
+*/
+
+
 cargarCarta();
+
 
 </script>
 
 
 </body>
+
 </html>
