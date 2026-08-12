@@ -30,20 +30,21 @@
     .encabezado {
       background:
         linear-gradient(
-          rgba(3, 31, 20, 0.94),
-          rgba(3, 31, 20, 0.94)
+          rgba(3, 31, 20, 0.96),
+          rgba(3, 31, 20, 0.96)
         );
 
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 28px 20px 30px;
       border-bottom: 4px solid #c99b37;
     }
 
-    .encabezado .codigo {
+    .codigo {
       color: #d8ad4d;
       font-size: 13px;
       letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .encabezado h1 {
@@ -61,27 +62,16 @@
     }
 
     .hero {
-      background:
-        linear-gradient(
-          135deg,
-          #315a37,
-          #132f20
-        );
-
-      min-height: 240px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      color: #f4e5bd;
-      text-align: center;
-
-      padding: 30px;
+      background: #153c29;
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 4px solid #c99b37;
     }
 
-    .hero .simbolo {
-      font-size: 90px;
+    .imagen-jaguar {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .contenido {
@@ -107,7 +97,7 @@
     }
 
     .tarjeta p {
-      line-height: 1.6;
+      line-height: 1.65;
       margin-bottom: 0;
     }
 
@@ -115,6 +105,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
+      margin-top: 14px;
     }
 
     .dato {
@@ -140,6 +131,11 @@
       color: #f3d993;
     }
 
+    .temalacatl .dato {
+      background: #f4ead4;
+      color: #222;
+    }
+
     .fuentes ul {
       padding-left: 20px;
     }
@@ -162,14 +158,30 @@
       font-size: 22px;
     }
 
+    footer p {
+      margin-bottom: 0;
+    }
+
     @media (max-width: 500px) {
 
       .encabezado h1 {
         font-size: 32px;
       }
 
+      .cientifico {
+        font-size: 18px;
+      }
+
       .contenido {
         padding: 12px;
+      }
+
+      .tarjeta {
+        padding: 17px;
+      }
+
+      .datos {
+        grid-template-columns: 1fr 1fr;
       }
 
     }
@@ -199,18 +211,11 @@
 
     <section class="hero">
 
-      <div>
-
-        <div class="simbolo">
-          🐆
-        </div>
-
-        <p>
-          Próximamente aquí aparecerá la ilustración
-          y el modelo 3D del Jaguar Mexicano.
-        </p>
-
-      </div>
+      <img
+        src="jaguar.png"
+        alt="Jaguar Mexicano"
+        class="imagen-jaguar"
+      >
 
     </section>
 
@@ -325,8 +330,6 @@
           Esta sección contendrá exclusivamente la información
           correspondiente al juego de cartas.
         </p>
-
-        <br>
 
         <div class="datos">
 
