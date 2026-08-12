@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Jaguar Mexicano | Temalácatl Códice</title>
+  <title>Temalácatl Códice</title>
 
   <style>
 
@@ -28,12 +28,7 @@
     }
 
     .encabezado {
-      background:
-        linear-gradient(
-          rgba(3, 31, 20, 0.96),
-          rgba(3, 31, 20, 0.96)
-        );
-
+      background: #06291d;
       color: white;
       text-align: center;
       padding: 28px 20px 30px;
@@ -62,13 +57,13 @@
     }
 
     .hero {
-      background: #153c29;
       width: 100%;
+      background: #153c29;
       overflow: hidden;
       border-bottom: 4px solid #c99b37;
     }
 
-    .imagen-jaguar {
+    .imagen-principal {
       width: 100%;
       height: auto;
       display: block;
@@ -83,11 +78,8 @@
       border-radius: 14px;
       padding: 20px;
       margin-bottom: 15px;
-
       border-left: 5px solid #b88b32;
-
-      box-shadow:
-        0 3px 10px rgba(0,0,0,0.10);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
     }
 
     .tarjeta h2 {
@@ -141,8 +133,18 @@
     }
 
     .fuentes li {
-      margin-bottom: 8px;
-      line-height: 1.4;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .fuentes a {
+      color: #0b5c42;
+    }
+
+    .error {
+      padding: 50px 20px;
+      text-align: center;
+      color: white;
     }
 
     footer {
@@ -180,10 +182,6 @@
         padding: 17px;
       }
 
-      .datos {
-        grid-template-columns: 1fr 1fr;
-      }
-
     }
 
   </style>
@@ -192,29 +190,27 @@
 
 <body>
 
-  <main class="contenedor">
+  <main class="contenedor" id="pagina">
 
     <header class="encabezado">
 
-      <div class="codigo">
-        TEMALÁCATL CÓDICE · ENM-047
-      </div>
+      <div class="codigo" id="codigo"></div>
 
-      <h1>Jaguar Mexicano</h1>
+      <h1 id="nombre">
+        Cargando...
+      </h1>
 
-      <p class="cientifico">
-        Panthera onca
-      </p>
+      <p class="cientifico" id="subtitulo"></p>
 
     </header>
 
 
-    <section class="hero">
+    <section class="hero" id="hero">
 
       <img
-        src="jaguar.png"
-        alt="Jaguar Mexicano"
-        class="imagen-jaguar"
+        id="imagen"
+        class="imagen-principal"
+        alt=""
       >
 
     </section>
@@ -223,68 +219,7 @@
     <section class="contenido">
 
 
-      <article class="tarjeta">
-
-        <h2>
-          🐾 Origen y características físicas
-        </h2>
-
-        <p>
-          El jaguar es el felino de mayor tamaño del continente
-          americano. Posee un cuerpo robusto, una cabeza ancha
-          y una poderosa musculatura. Su pelaje presenta
-          características rosetas oscuras que le permiten
-          camuflarse entre la vegetación.
-        </p>
-
-      </article>
-
-
-      <article class="tarjeta">
-
-        <h2>
-          🌿 Hábitat y distribución
-        </h2>
-
-        <p>
-          En México puede encontrarse principalmente en regiones
-          tropicales y subtropicales, donde ocupa selvas,
-          manglares, bosques y otros ecosistemas con cobertura
-          vegetal suficiente.
-        </p>
-
-      </article>
-
-
-      <article class="tarjeta">
-
-        <h2>
-          🗿 Importancia cultural
-        </h2>
-
-        <p>
-          El jaguar tuvo una profunda importancia simbólica para
-          distintas culturas mesoamericanas. Fue asociado con
-          fuerza, poder, guerra, oscuridad, naturaleza y el mundo
-          sobrenatural.
-        </p>
-
-      </article>
-
-
-      <article class="tarjeta">
-
-        <h2>
-          🌎 Conservación
-        </h2>
-
-        <p>
-          La conservación del jaguar depende de la protección de
-          sus hábitats, de los corredores biológicos y de las
-          especies que forman parte de los ecosistemas donde vive.
-        </p>
-
-      </article>
+      <div id="secciones"></div>
 
 
       <article class="tarjeta">
@@ -293,28 +228,9 @@
           📌 Datos generales
         </h2>
 
-        <div class="datos">
-
-          <div class="dato">
-            <strong>Nombre científico</strong>
-            Panthera onca
-          </div>
-
-          <div class="dato">
-            <strong>Clase</strong>
-            Mammalia
-          </div>
-
-          <div class="dato">
-            <strong>Familia</strong>
-            Felidae
-          </div>
-
-          <div class="dato">
-            <strong>Región</strong>
-            América
-          </div>
-
+        <div
+          class="datos"
+          id="datos-generales">
         </div>
 
       </article>
@@ -326,34 +242,12 @@
           ⚔️ En Temalácatl
         </h2>
 
-        <p>
-          Esta sección contendrá exclusivamente la información
-          correspondiente al juego de cartas.
-        </p>
-
-        <div class="datos">
-
-          <div class="dato">
-            <strong>Tipo</strong>
-            Naturaleza
-          </div>
-
-          <div class="dato">
-            <strong>Rareza</strong>
-            Por definir
-          </div>
-
-          <div class="dato">
-            <strong>ATK</strong>
-            —
-          </div>
-
-          <div class="dato">
-            <strong>DEF</strong>
-            —
-          </div>
-
+        <div
+          class="datos"
+          id="datos-temalacatl">
         </div>
+
+        <p id="lore"></p>
 
       </article>
 
@@ -364,18 +258,7 @@
           📚 Fuentes
         </h2>
 
-        <p>
-          La versión final de esta ficha incluirá referencias
-          verificadas de instituciones académicas,
-          científicas y culturales.
-        </p>
-
-        <ul>
-          <li>CONABIO</li>
-          <li>CONANP</li>
-          <li>INAH</li>
-          <li>Universidades y publicaciones académicas</li>
-        </ul>
+        <ul id="fuentes"></ul>
 
       </article>
 
@@ -395,8 +278,328 @@
 
     </footer>
 
-
   </main>
+
+
+  <script>
+
+    async function cargarCarta() {
+
+      try {
+
+        /*
+        Lee el ID que venga en la dirección.
+
+        Ejemplo:
+        ?id=ENM-047
+
+        Mientras estamos haciendo pruebas,
+        si no existe ID abrirá Jaguar.
+        */
+
+        const parametros =
+          new URLSearchParams(window.location.search);
+
+        const id =
+          parametros.get("id") || "ENM-047";
+
+
+        /*
+        Cargar base de datos
+        */
+
+        const respuesta =
+          await fetch("cards.json");
+
+        if (!respuesta.ok) {
+          throw new Error("No se pudo cargar cards.json");
+        }
+
+        const baseDatos =
+          await respuesta.json();
+
+
+        /*
+        Buscar carta
+        */
+
+        const carta =
+          baseDatos[id];
+
+
+        if (!carta) {
+
+          document.getElementById("pagina").innerHTML = `
+            <div class="error">
+              <h1>Carta no encontrada</h1>
+              <p>
+                No existe una carta registrada con el código
+                <strong>${id}</strong>.
+              </p>
+            </div>
+          `;
+
+          return;
+        }
+
+
+        /*
+        Título del navegador
+        */
+
+        document.title =
+          carta.nombre + " | Temalácatl Códice";
+
+
+        /*
+        Encabezado
+        */
+
+        document.getElementById("codigo")
+          .textContent =
+          `TEMALÁCATL CÓDICE · ${carta.codigo}`;
+
+        document.getElementById("nombre")
+          .textContent =
+          carta.nombre;
+
+        document.getElementById("subtitulo")
+          .textContent =
+          carta.subtitulo || "";
+
+
+        /*
+        Imagen
+        */
+
+        const imagen =
+          document.getElementById("imagen");
+
+        imagen.src =
+          carta.multimedia.imagen;
+
+        imagen.alt =
+          carta.nombre;
+
+
+        /*
+        Secciones culturales
+        */
+
+        const contenedorSecciones =
+          document.getElementById("secciones");
+
+
+        carta.secciones.forEach(seccion => {
+
+          const bloque =
+            document.createElement("article");
+
+          bloque.className =
+            "tarjeta";
+
+          bloque.innerHTML = `
+            <h2>
+              ${seccion.icono || ""}
+              ${seccion.titulo}
+            </h2>
+
+            <p>
+              ${seccion.contenido}
+            </p>
+          `;
+
+          contenedorSecciones.appendChild(bloque);
+
+        });
+
+
+        /*
+        Datos generales
+        */
+
+        const datosGenerales =
+          document.getElementById("datos-generales");
+
+
+        carta.datos_generales.forEach(dato => {
+
+          const bloque =
+            document.createElement("div");
+
+          bloque.className =
+            "dato";
+
+          bloque.innerHTML = `
+            <strong>
+              ${dato.nombre}
+            </strong>
+
+            ${dato.valor}
+          `;
+
+          datosGenerales.appendChild(bloque);
+
+        });
+
+
+        /*
+        Información del TCG
+        */
+
+        const t =
+          carta.temalacatl;
+
+        const atk =
+          t.atk === null
+          ? "—"
+          : t.atk;
+
+        const def =
+          t.def === null
+          ? "—"
+          : t.def;
+
+
+        document.getElementById(
+          "datos-temalacatl"
+        ).innerHTML = `
+
+          <div class="dato">
+            <strong>Tipo</strong>
+            ${t.tipo || "—"}
+          </div>
+
+          <div class="dato">
+            <strong>Rareza</strong>
+            ${t.rareza || "—"}
+          </div>
+
+          <div class="dato">
+            <strong>ATK</strong>
+            ${atk}
+          </div>
+
+          <div class="dato">
+            <strong>DEF</strong>
+            ${def}
+          </div>
+
+        `;
+
+
+        /*
+        Lore
+        */
+
+        const lore =
+          document.getElementById("lore");
+
+        if (t.lore) {
+
+          lore.innerHTML = `
+            <br>
+            <strong>Lore de Temalácatl</strong><br><br>
+            ${t.lore}
+          `;
+
+        } else {
+
+          lore.style.display =
+            "none";
+
+        }
+
+
+        /*
+        Fuentes
+        */
+
+        const listaFuentes =
+          document.getElementById("fuentes");
+
+
+        carta.fuentes.forEach(fuente => {
+
+          const elemento =
+            document.createElement("li");
+
+
+          if (fuente.url) {
+
+            elemento.innerHTML = `
+              <strong>
+                ${fuente.institucion}
+              </strong>
+
+              ${fuente.titulo
+                ? " — " + fuente.titulo
+                : ""
+              }
+
+              <br>
+
+              <a
+                href="${fuente.url}"
+                target="_blank"
+                rel="noopener noreferrer">
+                Consultar fuente
+              </a>
+            `;
+
+          } else {
+
+            elemento.innerHTML = `
+              <strong>
+                ${fuente.institucion}
+              </strong>
+
+              ${fuente.titulo
+                ? " — " + fuente.titulo
+                : ""
+              }
+            `;
+
+          }
+
+
+          listaFuentes.appendChild(
+            elemento
+          );
+
+        });
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("pagina")
+          .innerHTML = `
+
+          <div class="error">
+
+            <h1>
+              Error al cargar el Códice
+            </h1>
+
+            <p>
+              No fue posible cargar la información
+              de esta carta.
+            </p>
+
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+    cargarCarta();
+
+  </script>
 
 </body>
 
