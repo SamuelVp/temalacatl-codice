@@ -1,18 +1,400 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temalácatl Códice</title>
+
+  <title>Jaguar Mexicano | Temalácatl Códice</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07140f;
+      color: #222;
+    }
+
+    .contenedor {
+      max-width: 700px;
+      margin: auto;
+      background: #eee5d2;
+      min-height: 100vh;
+    }
+
+    .encabezado {
+      background:
+        linear-gradient(
+          rgba(3, 31, 20, 0.94),
+          rgba(3, 31, 20, 0.94)
+        );
+
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-bottom: 4px solid #c99b37;
+    }
+
+    .encabezado .codigo {
+      color: #d8ad4d;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .encabezado h1 {
+      margin: 10px 0 4px;
+      font-family: Georgia, serif;
+      font-size: 38px;
+      color: #f4e5bd;
+    }
+
+    .cientifico {
+      margin: 0;
+      font-size: 20px;
+      font-style: italic;
+      color: #d8ad4d;
+    }
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          #315a37,
+          #132f20
+        );
+
+      min-height: 240px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #f4e5bd;
+      text-align: center;
+
+      padding: 30px;
+    }
+
+    .hero .simbolo {
+      font-size: 90px;
+    }
+
+    .contenido {
+      padding: 18px;
+    }
+
+    .tarjeta {
+      background: #fffaf0;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 15px;
+
+      border-left: 5px solid #b88b32;
+
+      box-shadow:
+        0 3px 10px rgba(0,0,0,0.10);
+    }
+
+    .tarjeta h2 {
+      margin-top: 0;
+      color: #123c2b;
+      font-size: 21px;
+    }
+
+    .tarjeta p {
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .datos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .dato {
+      background: #f2e7ce;
+      padding: 14px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .dato strong {
+      display: block;
+      color: #123c2b;
+      margin-bottom: 5px;
+    }
+
+    .temalacatl {
+      background: #0b2e20;
+      color: white;
+      border-left: 5px solid #d6aa4b;
+    }
+
+    .temalacatl h2 {
+      color: #f3d993;
+    }
+
+    .fuentes ul {
+      padding-left: 20px;
+    }
+
+    .fuentes li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    footer {
+      background: #061c13;
+      color: #d8ad4d;
+      text-align: center;
+      padding: 25px 15px;
+      border-top: 3px solid #c99b37;
+    }
+
+    footer strong {
+      font-family: Georgia, serif;
+      font-size: 22px;
+    }
+
+    @media (max-width: 500px) {
+
+      .encabezado h1 {
+        font-size: 32px;
+      }
+
+      .contenido {
+        padding: 12px;
+      }
+
+    }
+
+  </style>
 </head>
 
+
 <body>
-  <h1>Temalácatl Códice</h1>
 
-  <p>Códice digital de Temalácatl TCG</p>
+  <main class="contenedor">
 
-  <h2>Jaguar Mexicano</h2>
+    <header class="encabezado">
 
-  <p>Esta será la primera ficha de prueba del Códice.</p>
+      <div class="codigo">
+        TEMALÁCATL CÓDICE · ENM-047
+      </div>
+
+      <h1>Jaguar Mexicano</h1>
+
+      <p class="cientifico">
+        Panthera onca
+      </p>
+
+    </header>
+
+
+    <section class="hero">
+
+      <div>
+
+        <div class="simbolo">
+          🐆
+        </div>
+
+        <p>
+          Próximamente aquí aparecerá la ilustración
+          y el modelo 3D del Jaguar Mexicano.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="contenido">
+
+
+      <article class="tarjeta">
+
+        <h2>
+          🐾 Origen y características físicas
+        </h2>
+
+        <p>
+          El jaguar es el felino de mayor tamaño del continente
+          americano. Posee un cuerpo robusto, una cabeza ancha
+          y una poderosa musculatura. Su pelaje presenta
+          características rosetas oscuras que le permiten
+          camuflarse entre la vegetación.
+        </p>
+
+      </article>
+
+
+      <article class="tarjeta">
+
+        <h2>
+          🌿 Hábitat y distribución
+        </h2>
+
+        <p>
+          En México puede encontrarse principalmente en regiones
+          tropicales y subtropicales, donde ocupa selvas,
+          manglares, bosques y otros ecosistemas con cobertura
+          vegetal suficiente.
+        </p>
+
+      </article>
+
+
+      <article class="tarjeta">
+
+        <h2>
+          🗿 Importancia cultural
+        </h2>
+
+        <p>
+          El jaguar tuvo una profunda importancia simbólica para
+          distintas culturas mesoamericanas. Fue asociado con
+          fuerza, poder, guerra, oscuridad, naturaleza y el mundo
+          sobrenatural.
+        </p>
+
+      </article>
+
+
+      <article class="tarjeta">
+
+        <h2>
+          🌎 Conservación
+        </h2>
+
+        <p>
+          La conservación del jaguar depende de la protección de
+          sus hábitats, de los corredores biológicos y de las
+          especies que forman parte de los ecosistemas donde vive.
+        </p>
+
+      </article>
+
+
+      <article class="tarjeta">
+
+        <h2>
+          📌 Datos generales
+        </h2>
+
+        <div class="datos">
+
+          <div class="dato">
+            <strong>Nombre científico</strong>
+            Panthera onca
+          </div>
+
+          <div class="dato">
+            <strong>Clase</strong>
+            Mammalia
+          </div>
+
+          <div class="dato">
+            <strong>Familia</strong>
+            Felidae
+          </div>
+
+          <div class="dato">
+            <strong>Región</strong>
+            América
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="tarjeta temalacatl">
+
+        <h2>
+          ⚔️ En Temalácatl
+        </h2>
+
+        <p>
+          Esta sección contendrá exclusivamente la información
+          correspondiente al juego de cartas.
+        </p>
+
+        <br>
+
+        <div class="datos">
+
+          <div class="dato">
+            <strong>Tipo</strong>
+            Naturaleza
+          </div>
+
+          <div class="dato">
+            <strong>Rareza</strong>
+            Por definir
+          </div>
+
+          <div class="dato">
+            <strong>ATK</strong>
+            —
+          </div>
+
+          <div class="dato">
+            <strong>DEF</strong>
+            —
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="tarjeta fuentes">
+
+        <h2>
+          📚 Fuentes
+        </h2>
+
+        <p>
+          La versión final de esta ficha incluirá referencias
+          verificadas de instituciones académicas,
+          científicas y culturales.
+        </p>
+
+        <ul>
+          <li>CONABIO</li>
+          <li>CONANP</li>
+          <li>INAH</li>
+          <li>Universidades y publicaciones académicas</li>
+        </ul>
+
+      </article>
+
+
+    </section>
+
+
+    <footer>
+
+      <strong>
+        Temalácatl Códice
+      </strong>
+
+      <p>
+        Conoce México a través de sus cartas
+      </p>
+
+    </footer>
+
+
+  </main>
+
 </body>
+
 </html>
